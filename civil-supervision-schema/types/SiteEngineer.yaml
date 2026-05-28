@@ -30,6 +30,12 @@ properties:
     required: false
     nullable: true
     description: Construction engineer license/registration number (건설기술인 자격번호).
+  role_type:
+    type: string
+    required: false
+    nullable: true
+    description: 현장에서의 세부 역할 — 현장대리인(특·고급)·일반 시공기사·품질관리자·자재관리자·안전감독자.
+    enum: [site_representative, field_engineer, quality_manager, materials_manager, safety_supervisor]
 
   # --- faceted classification axes (added) ---
   topic_phase:

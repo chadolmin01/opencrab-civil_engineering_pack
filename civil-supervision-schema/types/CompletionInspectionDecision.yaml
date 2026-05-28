@@ -1,7 +1,7 @@
-type: StageApprovalDecision
+type: CompletionInspectionDecision
 version: "1.0"
 space: decision
-description: 단계별 시공 승인 — Qualified-actor decision approving completion of a construction stage and authorizing progress to the next stage. 근거: 건진법 §55, 건설사업관리 업무지침.
+description: 준공검사 결정 — Qualified-actor decision certifying that all contracted construction work has been completed in accordance with drawings, specifications, and regulations, and authorizing project closeout. 근거: 건진법 §55③.
 properties:
   decision_id:
     type: string
@@ -22,7 +22,7 @@ properties:
     type: string
     required: false
     nullable: true
-    description: Legal/regulatory basis (e.g., `건진법 §55 ②`).
+    description: Legal/regulatory basis (e.g., `건진법 §55 ③`).
   decision_status:
     type: string
     required: true
@@ -40,27 +40,47 @@ properties:
     required: false
     nullable: true
     description: Additional remarks.
-  stage_name:
+  contract_completion_date:
+    type: string
+    required: false
+    nullable: true
+    description: Contractual completion date (ISO 8601 or yyyy-mm-dd).
+  actual_completion_date:
     type: string
     required: true
     nullable: false
-    description: Name of the construction stage (e.g., `기초 완료`, `골조 완료`).
-  completion_percentage:
-    type: float
-    required: false
-    nullable: true
-    description: Reported completion percentage of the stage (0.0 to 100.0).
-  approved:
+    description: Actual date of completion claimed by the contractor (ISO 8601 or yyyy-mm-dd).
+  defects_found:
     type: boolean
     required: true
     nullable: false
-    description: Whether the stage completion is approved.
-  next_stage_authorized:
+    description: Whether defects or deficiencies were identified during completion inspection.
+  defect_list_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Node ID or document reference for the defect list (하자목록).
+  defect_rectification_deadline:
+    type: string
+    required: false
+    nullable: true
+    description: Deadline for rectifying identified defects (ISO 8601 or yyyy-mm-dd).
+  warranty_period_months:
+    type: integer
+    required: false
+    nullable: true
+    description: Defect warranty period in months from the completion date (하자담보 기간).
+  as_built_drawings_verified:
     type: boolean
     required: false
     nullable: true
-    description: Whether progress to the next construction stage is authorized.
-
+    description: Whether as-built drawings have been verified and accepted.
+  result:
+    type: string
+    required: true
+    nullable: false
+    description: Decision outcome for the completion inspection.
+    enum: [passed, passed_with_conditions, failed, reinspection_required]
   hold_point_type:
     type: string
     required: false
@@ -74,7 +94,7 @@ properties:
     description: 발주처별 전용 보고 시스템 입력.
     enum: [LH_CMS, EX_CMIS, KR_CMIS, KWATER_CMS, FMS_KOSHA, FMS_MOLIT, custom]
 
-  # --- faceted classification axes (added) ---
+  # --- faceted classification axes ---
   topic_material:
     type: string
     required: false

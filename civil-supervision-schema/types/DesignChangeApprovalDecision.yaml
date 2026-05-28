@@ -1,7 +1,7 @@
-type: StageApprovalDecision
+type: DesignChangeApprovalDecision
 version: "1.0"
 space: decision
-description: 단계별 시공 승인 — Qualified-actor decision approving completion of a construction stage and authorizing progress to the next stage. 근거: 건진법 §55, 건설사업관리 업무지침.
+description: 설계변경 승인 결정 — Qualified-actor decision approving or rejecting a proposed change to approved construction drawings or specifications. 근거: 건진법 §39, 국계법 시행령 §64.
 properties:
   decision_id:
     type: string
@@ -22,7 +22,7 @@ properties:
     type: string
     required: false
     nullable: true
-    description: Legal/regulatory basis (e.g., `건진법 §55 ②`).
+    description: Legal/regulatory basis (e.g., `건진법 §39 ①`, `국계법 시행령 §64`).
   decision_status:
     type: string
     required: true
@@ -40,27 +40,45 @@ properties:
     required: false
     nullable: true
     description: Additional remarks.
-  stage_name:
+  change_request_number:
     type: string
     required: true
     nullable: false
-    description: Name of the construction stage (e.g., `기초 완료`, `골조 완료`).
-  completion_percentage:
+    description: Unique reference number of the design change request (설계변경 요청번호).
+  change_category:
+    type: string
+    required: true
+    nullable: false
+    description: |
+      설계변경 유형 — Category of the design change.
+      quantity_change(물량 변경) / spec_change(규격 변경) /
+      scope_addition(범위 추가) / scope_reduction(범위 삭감) / error_correction(설계 오류 정정).
+    enum: [quantity_change, spec_change, scope_addition, scope_reduction, error_correction, other]
+  cost_impact:
     type: float
     required: false
     nullable: true
-    description: Reported completion percentage of the stage (0.0 to 100.0).
-  approved:
-    type: boolean
-    required: true
-    nullable: false
-    description: Whether the stage completion is approved.
-  next_stage_authorized:
-    type: boolean
+    description: Estimated cost impact of the design change in KRW (양수: 증액, 음수: 감액).
+  schedule_impact_days:
+    type: integer
     required: false
     nullable: true
-    description: Whether progress to the next construction stage is authorized.
-
+    description: Estimated schedule impact in calendar days (양수: 공기 연장, 음수: 단축).
+  approving_authority:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      승인 권한자 — Tier of authority required for this change approval.
+      site_manager(현장소장 전결) / cm_chief(책임감리원 승인) /
+      owner(발주처 승인) / regulatory(관계기관 협의 필요).
+    enum: [site_manager, cm_chief, owner, regulatory]
+  result:
+    type: string
+    required: true
+    nullable: false
+    description: Decision outcome for the design change request.
+    enum: [approved, rejected, conditional_approval, deferred]
   hold_point_type:
     type: string
     required: false
@@ -74,7 +92,7 @@ properties:
     description: 발주처별 전용 보고 시스템 입력.
     enum: [LH_CMS, EX_CMIS, KR_CMIS, KWATER_CMS, FMS_KOSHA, FMS_MOLIT, custom]
 
-  # --- faceted classification axes (added) ---
+  # --- faceted classification axes ---
   topic_material:
     type: string
     required: false

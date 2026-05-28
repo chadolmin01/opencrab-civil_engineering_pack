@@ -12,8 +12,8 @@ properties:
     type: string
     required: true
     nullable: false
-    description: Grade under 시특법 — typically senior or master for chief inspector role.
-    enum: [senior, master]
+    description: Grade under 시특법 — intermediate (중급) permitted for certain facility types under 시특법 시행령 별표 7; senior (고급) or master (특급) for standard chief inspector role.
+    enum: [intermediate, senior, master]
     default: master
   affiliated_organization:
     type: string

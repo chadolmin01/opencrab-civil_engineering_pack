@@ -79,6 +79,19 @@ properties:
     description: Decision outcome for the material receipt.
     enum: [accepted, rejected, conditional]
 
+  hold_point_type:
+    type: string
+    required: false
+    nullable: true
+    description: Hold Point는 자격자 입회 필수, Witness Point는 선택, Surveillance Point는 감리원 일상 점검.
+    enum: [hold_point, witness_point, surveillance_point]
+  reporting_system:
+    type: string
+    required: false
+    nullable: true
+    description: 발주처별 전용 보고 시스템 입력.
+    enum: [LH_CMS, EX_CMIS, KR_CMIS, KWATER_CMS, FMS_KOSHA, FMS_MOLIT, custom]
+
   # --- faceted classification axes (added) ---
   topic_material:
     type: string

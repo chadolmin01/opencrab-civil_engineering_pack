@@ -12,8 +12,8 @@ properties:
     type: string
     required: true
     nullable: false
-    description: Construction engineer grade — restricted to master (특급) for chief supervisor role under 건진법.
-    enum: [master]
+    description: Construction engineer grade — master (특급) required for chief supervisor role; senior (고급) permitted for projects in the 10–20 billion KRW range under 건진법 시행령 별표 6.
+    enum: [senior, master]
     default: master
   affiliated_organization:
     type: string

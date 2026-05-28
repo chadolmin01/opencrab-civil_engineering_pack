@@ -1,7 +1,7 @@
-type: StageApprovalDecision
+type: ProgressPaymentInspectionDecision
 version: "1.0"
 space: decision
-description: 단계별 시공 승인 — Qualified-actor decision approving completion of a construction stage and authorizing progress to the next stage. 근거: 건진법 §55, 건설사업관리 업무지침.
+description: 기성검사 결정 — Qualified-actor decision confirming the progress and workmanship of completed construction work to authorize interim payment. 근거: 국계법 시행령 §55, §57.
 properties:
   decision_id:
     type: string
@@ -22,7 +22,7 @@ properties:
     type: string
     required: false
     nullable: true
-    description: Legal/regulatory basis (e.g., `건진법 §55 ②`).
+    description: Legal/regulatory basis (e.g., `국계법 시행령 §55`, `국계법 시행령 §57`).
   decision_status:
     type: string
     required: true
@@ -40,27 +40,45 @@ properties:
     required: false
     nullable: true
     description: Additional remarks.
-  stage_name:
+  payment_period:
     type: string
     required: true
     nullable: false
-    description: Name of the construction stage (e.g., `기초 완료`, `골조 완료`).
-  completion_percentage:
+    description: Billing period covered by this inspection (e.g., `2025-01`, `2025-Q1`, or `2025-01-01/2025-03-31`).
+  claimed_completion_rate:
+    type: float
+    required: true
+    nullable: false
+    description: Contractor-claimed completion rate as a percentage (0.0 to 100.0).
+  verified_completion_rate:
     type: float
     required: false
     nullable: true
-    description: Reported completion percentage of the stage (0.0 to 100.0).
-  approved:
-    type: boolean
-    required: true
-    nullable: false
-    description: Whether the stage completion is approved.
-  next_stage_authorized:
-    type: boolean
+    description: Inspector-verified completion rate as a percentage after field check (0.0 to 100.0).
+  claimed_amount_krw:
+    type: float
     required: false
     nullable: true
-    description: Whether progress to the next construction stage is authorized.
-
+    description: Contractor-claimed interim payment amount in KRW.
+  approved_amount_krw:
+    type: float
+    required: false
+    nullable: true
+    description: Inspector-approved interim payment amount in KRW after verification.
+  inspector_role:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      검사자 자격 — Role of the qualified actor conducting the inspection.
+      owner_inspector(발주처 감독관) / cm_chief(책임감리원) / third_party(제3자 검사기관).
+    enum: [owner_inspector, cm_chief, third_party]
+  result:
+    type: string
+    required: true
+    nullable: false
+    description: Decision outcome for the progress payment inspection.
+    enum: [approved, partially_approved, rejected, pending_correction]
   hold_point_type:
     type: string
     required: false
@@ -74,7 +92,7 @@ properties:
     description: 발주처별 전용 보고 시스템 입력.
     enum: [LH_CMS, EX_CMIS, KR_CMIS, KWATER_CMS, FMS_KOSHA, FMS_MOLIT, custom]
 
-  # --- faceted classification axes (added) ---
+  # --- faceted classification axes ---
   topic_material:
     type: string
     required: false

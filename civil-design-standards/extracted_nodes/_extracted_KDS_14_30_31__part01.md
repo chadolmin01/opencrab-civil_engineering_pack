@@ -58,7 +58,7 @@ _source jsonl: KDS_14_30_31__part01.jsonl_
 - node_type: `Qualification`
 - source_article: KDS 14 31 25 §4.1.2
 - properties:
-  - `name`: 용접기능자 (Qualified Welder) — KS B 0885 등 용접자격검정 합격자
+  - `name`: 용접기능자 (Qualified Welder) — KS B ISO 9606-1 용접사 기량 인정시험 합격자 (시공 기준: KCS 14 31 20)
 
 ## Node — Qualification / `Qualification:kds14_30_q_ndt_level2`
 - space: `concept`

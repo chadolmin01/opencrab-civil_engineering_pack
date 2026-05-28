@@ -34,6 +34,9 @@ types:
   - StageApprovalDecision
   - SafetyInspectionDecision
   - PrecisionDiagnosisDecision
+  - DesignChangeApprovalDecision
+  - ProgressPaymentInspectionDecision
+  - CompletionInspectionDecision
   - DecisionOutcome
 spaces:
   - subject
