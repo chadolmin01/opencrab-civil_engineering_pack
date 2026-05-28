@@ -61,18 +61,24 @@ This is sample/seed data. Production usage: install the pack, then ingest your o
 ## Layout
 
 ```
+opencrab_ingest/             ← SaaS canonical ingest dir (chunked raw text)
+  chunks.jsonl                 132 sources / 1,108 text chunks
+  manifest.json                source-level metadata (sha256, bytes, chars)
+  manifest.csv                 same, CSV form
 civil_engineering.yaml       — pack manifest (26 types, 5 spaces)
 types/                       — 26 type schemas with facet axes
-extracted/                   — bundled seed graph
+extracted/                   — bundled pre-extracted seed graph (optional)
   laws/         7 jsonl
-  directives/   5 jsonl
+  directives/  ~8 jsonl
   forms/       11 jsonl
   standards/
-    KCS_*.jsonl  (4)         — first-pass KCS/KDS clauses
-    ks/         1 jsonl      — KS material/test standards
-    kcs/        1 jsonl      — KCS construction specifications
-    kds/        3 jsonl      — KDS design standards (concrete, steel, geotech)
+    KCS_*.jsonl (4)            first-pass KCS/KDS clauses
+    ks/         ~2 jsonl       KS material/test standards
+    kcs/        ~3 jsonl       KCS construction specifications
+    kds/        ~6 jsonl       KDS design standards (concrete/steel/geotech)
 ```
+
+The `opencrab_ingest/` directory is the SaaS-canonical entry point: raw text chunks the OpenCRAB LLM extractor can directly run its 6-stage pipeline on. The `extracted/` directory holds pre-extracted node/edge seeds that the extractor may augment or override.
 
 ## Intended use
 
