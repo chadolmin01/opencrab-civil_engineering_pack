@@ -1,0 +1,926 @@
+[
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_10_10_00.md",
+    "filename": "KDS_10_10_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_10_10_00.md",
+    "chars": 5247,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_10_05.md",
+    "filename": "KDS_11_10_05.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_10_05.md",
+    "chars": 4813,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_10_10.md",
+    "filename": "KDS_11_10_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_10_10.md",
+    "chars": 18654,
+    "chunks_original": 7
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_10_15.md",
+    "filename": "KDS_11_10_15.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_10_15.md",
+    "chars": 42177,
+    "chunks_original": 15
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_30_05.md",
+    "filename": "KDS_11_30_05.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_30_05.md",
+    "chars": 11230,
+    "chunks_original": 4
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_50_05.md",
+    "filename": "KDS_11_50_05.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_50_05.md",
+    "chars": 7779,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_50_15.md",
+    "filename": "KDS_11_50_15.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_50_15.md",
+    "chars": 11735,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_50_25.md",
+    "filename": "KDS_11_50_25.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_50_25.md",
+    "chars": 4012,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_50_30.md",
+    "filename": "KDS_11_50_30.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_50_30.md",
+    "chars": 3048,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_60_00.md",
+    "filename": "KDS_11_60_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_60_00.md",
+    "chars": 6273,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_80_05.md",
+    "filename": "KDS_11_80_05.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_80_05.md",
+    "chars": 15197,
+    "chunks_original": 6
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_80_10.md",
+    "filename": "KDS_11_80_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_80_10.md",
+    "chars": 6789,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_80_15.md",
+    "filename": "KDS_11_80_15.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_80_15.md",
+    "chars": 2984,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_80_20.md",
+    "filename": "KDS_11_80_20.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_80_20.md",
+    "chars": 2789,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_80_25.md",
+    "filename": "KDS_11_80_25.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_80_25.md",
+    "chars": 1156,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_11_90_00.md",
+    "filename": "KDS_11_90_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_11_90_00.md",
+    "chars": 4084,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_01.md",
+    "filename": "KDS_14_20_01.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_01.md",
+    "chars": 60276,
+    "chunks_original": 21
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_10.md",
+    "filename": "KDS_14_20_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_10.md",
+    "chars": 10946,
+    "chunks_original": 4
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_20.md",
+    "filename": "KDS_14_20_20.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_20.md",
+    "chars": 25599,
+    "chunks_original": 9
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_22.md",
+    "filename": "KDS_14_20_22.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_22.md",
+    "chars": 35892,
+    "chunks_original": 13
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_24.md",
+    "filename": "KDS_14_20_24.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_24.md",
+    "chars": 6583,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_26.md",
+    "filename": "KDS_14_20_26.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_26.md",
+    "chars": 1622,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_30.md",
+    "filename": "KDS_14_20_30.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_30.md",
+    "chars": 16839,
+    "chunks_original": 7
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_40.md",
+    "filename": "KDS_14_20_40.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_40.md",
+    "chars": 25075,
+    "chunks_original": 9
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_50.md",
+    "filename": "KDS_14_20_50.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_50.md",
+    "chars": 14511,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_52.md",
+    "filename": "KDS_14_20_52.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_52.md",
+    "chars": 19864,
+    "chunks_original": 7
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_54.md",
+    "filename": "KDS_14_20_54.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_54.md",
+    "chars": 28797,
+    "chunks_original": 11
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_60.md",
+    "filename": "KDS_14_20_60.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_60.md",
+    "chars": 15692,
+    "chunks_original": 6
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_62.md",
+    "filename": "KDS_14_20_62.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_62.md",
+    "chars": 6902,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_64.md",
+    "filename": "KDS_14_20_64.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_64.md",
+    "chars": 8036,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_66.md",
+    "filename": "KDS_14_20_66.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_66.md",
+    "chars": 7012,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_68.md",
+    "filename": "KDS_14_20_68.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_68.md",
+    "chars": 54428,
+    "chunks_original": 19
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_70.md",
+    "filename": "KDS_14_20_70.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_70.md",
+    "chars": 41460,
+    "chunks_original": 16
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_72.md",
+    "filename": "KDS_14_20_72.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_72.md",
+    "chars": 7019,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_74.md",
+    "filename": "KDS_14_20_74.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_74.md",
+    "chars": 11465,
+    "chunks_original": 4
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_80.md",
+    "filename": "KDS_14_20_80.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_80.md",
+    "chars": 28315,
+    "chunks_original": 10
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_20_90.md",
+    "filename": "KDS_14_20_90.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_20_90.md",
+    "chars": 13204,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_30_05.md",
+    "filename": "KDS_14_30_05.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_30_05.md",
+    "chars": 38538,
+    "chunks_original": 15
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_30_10.md",
+    "filename": "KDS_14_30_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_30_10.md",
+    "chars": 74574,
+    "chunks_original": 26
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_30_20.md",
+    "filename": "KDS_14_30_20.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_30_20.md",
+    "chars": 12096,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_30_25.md",
+    "filename": "KDS_14_30_25.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_30_25.md",
+    "chars": 11318,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_30_50.md",
+    "filename": "KDS_14_30_50.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_30_50.md",
+    "chars": 1535,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_05.md",
+    "filename": "KDS_14_31_05.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_05.md",
+    "chars": 70185,
+    "chunks_original": 25
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_10.md",
+    "filename": "KDS_14_31_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_10.md",
+    "chars": 158343,
+    "chunks_original": 55
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_15.md",
+    "filename": "KDS_14_31_15.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_15.md",
+    "chars": 12704,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_20.md",
+    "filename": "KDS_14_31_20.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_20.md",
+    "chars": 27348,
+    "chunks_original": 12
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_25.md",
+    "filename": "KDS_14_31_25.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_25.md",
+    "chars": 52165,
+    "chunks_original": 19
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_50.md",
+    "filename": "KDS_14_31_50.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_50.md",
+    "chars": 2719,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_55.md",
+    "filename": "KDS_14_31_55.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_55.md",
+    "chars": 3544,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_60.md",
+    "filename": "KDS_14_31_60.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_60.md",
+    "chars": 53890,
+    "chunks_original": 19
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_70.md",
+    "filename": "KDS_14_31_70.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_70.md",
+    "chars": 3782,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_80.md",
+    "filename": "KDS_14_31_80.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_80.md",
+    "chars": 28392,
+    "chunks_original": 10
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_14_31_85.md",
+    "filename": "KDS_14_31_85.md",
+    "path": "opencrab_ingest/sources/kds__KDS_14_31_85.md",
+    "chars": 20257,
+    "chunks_original": 7
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_17_10_00.md",
+    "filename": "KDS_17_10_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_17_10_00.md",
+    "chars": 21653,
+    "chunks_original": 8
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_21_10_00.md",
+    "filename": "KDS_21_10_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_21_10_00.md",
+    "chars": 4994,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_21_30_00.md",
+    "filename": "KDS_21_30_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_21_30_00.md",
+    "chars": 24124,
+    "chunks_original": 10
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_21_45_00.md",
+    "filename": "KDS_21_45_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_21_45_00.md",
+    "chars": 7063,
+    "chunks_original": 3
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_21_50_00.md",
+    "filename": "KDS_21_50_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_21_50_00.md",
+    "chars": 33084,
+    "chunks_original": 12
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_21_60_00.md",
+    "filename": "KDS_21_60_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_21_60_00.md",
+    "chars": 10368,
+    "chunks_original": 4
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_31_70_15.md",
+    "filename": "KDS_31_70_15.md",
+    "path": "opencrab_ingest/sources/kds__KDS_31_70_15.md",
+    "chars": 4136,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_10_05.md",
+    "filename": "KDS_41_10_05.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_10_05.md",
+    "chars": 12851,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_10_10.md",
+    "filename": "KDS_41_10_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_10_10.md",
+    "chars": 18547,
+    "chunks_original": 7
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_12_00.md",
+    "filename": "KDS_41_12_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_12_00.md",
+    "chars": 151712,
+    "chunks_original": 56
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_17_00.md",
+    "filename": "KDS_41_17_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_17_00.md",
+    "chars": 152249,
+    "chunks_original": 54
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_19_00.md",
+    "filename": "KDS_41_19_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_19_00.md",
+    "chars": 46839,
+    "chunks_original": 16
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_20_00.md",
+    "filename": "KDS_41_20_00.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_20_00.md",
+    "chars": 4729,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_20_10.md",
+    "filename": "KDS_41_20_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_20_10.md",
+    "chars": 35560,
+    "chunks_original": 13
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_30_10.md",
+    "filename": "KDS_41_30_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_30_10.md",
+    "chars": 28774,
+    "chunks_original": 10
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_30_20.md",
+    "filename": "KDS_41_30_20.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_30_20.md",
+    "chars": 46298,
+    "chunks_original": 16
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_30_30.md",
+    "filename": "KDS_41_30_30.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_30_30.md",
+    "chars": 196892,
+    "chunks_original": 69
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_30_40.md",
+    "filename": "KDS_41_30_40.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_30_40.md",
+    "chars": 73301,
+    "chunks_original": 26
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_40_10.md",
+    "filename": "KDS_41_40_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_40_10.md",
+    "chars": 22733,
+    "chunks_original": 8
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_40_20.md",
+    "filename": "KDS_41_40_20.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_40_20.md",
+    "chars": 1633,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_80_10.md",
+    "filename": "KDS_41_80_10.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_80_10.md",
+    "chars": 25665,
+    "chunks_original": 10
+  },
+  {
+    "source_id": "civil-engineering-pack/kds/KDS_41_80_20.md",
+    "filename": "KDS_41_80_20.md",
+    "path": "opencrab_ingest/sources/kds__KDS_41_80_20.md",
+    "chars": 13448,
+    "chunks_original": 5
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/directives/감리업무지침.txt",
+    "filename": "감리업무지침.txt",
+    "path": "opencrab_ingest/sources/raw__directives__감리업무지침.md",
+    "chars": 95166,
+    "chunks_original": 34
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/directives/건설기술인등급인정기준.txt",
+    "filename": "건설기술인등급인정기준.txt",
+    "path": "opencrab_ingest/sources/raw__directives__건설기술인등급인정기준.md",
+    "chars": 127414,
+    "chunks_original": 45
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/directives/건설사업관리업무지침.txt",
+    "filename": "건설사업관리업무지침.txt",
+    "path": "opencrab_ingest/sources/raw__directives__건설사업관리업무지침.md",
+    "chars": 157602,
+    "chunks_original": 62
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/directives/안전작업허가지침.txt",
+    "filename": "안전작업허가지침.txt",
+    "path": "opencrab_ingest/sources/raw__directives__안전작업허가지침.md",
+    "chars": 24550,
+    "chunks_original": 9
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/directives/주택건설공사감리업무세부기준.txt",
+    "filename": "주택건설공사감리업무세부기준.txt",
+    "path": "opencrab_ingest/sources/raw__directives__주택건설공사감리업무세부기준.md",
+    "chars": 33705,
+    "chunks_original": 15
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/검측요청서_양식.txt",
+    "filename": "검측요청서_양식.txt",
+    "path": "opencrab_ingest/sources/raw__forms__검측요청서_양식.md",
+    "chars": 1966,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/검측체크리스트_거푸집.txt",
+    "filename": "검측체크리스트_거푸집.txt",
+    "path": "opencrab_ingest/sources/raw__forms__검측체크리스트_거푸집.md",
+    "chars": 2126,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/검측체크리스트_배수공.txt",
+    "filename": "검측체크리스트_배수공.txt",
+    "path": "opencrab_ingest/sources/raw__forms__검측체크리스트_배수공.md",
+    "chars": 1775,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/검측체크리스트_철근.txt",
+    "filename": "검측체크리스트_철근.txt",
+    "path": "opencrab_ingest/sources/raw__forms__검측체크리스트_철근.md",
+    "chars": 2157,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/검측체크리스트_콘크리트타설.txt",
+    "filename": "검측체크리스트_콘크리트타설.txt",
+    "path": "opencrab_ingest/sources/raw__forms__검측체크리스트_콘크리트타설.md",
+    "chars": 2795,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/검측체크리스트_토공.txt",
+    "filename": "검측체크리스트_토공.txt",
+    "path": "opencrab_ingest/sources/raw__forms__검측체크리스트_토공.md",
+    "chars": 1949,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/검측체크리스트_항타.txt",
+    "filename": "검측체크리스트_항타.txt",
+    "path": "opencrab_ingest/sources/raw__forms__검측체크리스트_항타.md",
+    "chars": 2715,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/시공일지_양식.txt",
+    "filename": "시공일지_양식.txt",
+    "path": "opencrab_ingest/sources/raw__forms__시공일지_양식.md",
+    "chars": 1770,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/안전점검보고서_양식.txt",
+    "filename": "안전점검보고서_양식.txt",
+    "path": "opencrab_ingest/sources/raw__forms__안전점검보고서_양식.md",
+    "chars": 2566,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/자재검수일보_양식.txt",
+    "filename": "자재검수일보_양식.txt",
+    "path": "opencrab_ingest/sources/raw__forms__자재검수일보_양식.md",
+    "chars": 3152,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/forms/작업허가서_양식.txt",
+    "filename": "작업허가서_양식.txt",
+    "path": "opencrab_ingest/sources/raw__forms__작업허가서_양식.md",
+    "chars": 3755,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/kcs/KCS_11_30_연약지반.txt",
+    "filename": "KCS_11_30_연약지반.txt",
+    "path": "opencrab_ingest/sources/raw__kcs__KCS_11_30_연약지반.md",
+    "chars": 2278,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/kcs/KCS_14_20_콘크리트공사.txt",
+    "filename": "KCS_14_20_콘크리트공사.txt",
+    "path": "opencrab_ingest/sources/raw__kcs__KCS_14_20_콘크리트공사.md",
+    "chars": 3107,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/kcs/KCS_14_31_강구조공사.txt",
+    "filename": "KCS_14_31_강구조공사.txt",
+    "path": "opencrab_ingest/sources/raw__kcs__KCS_14_31_강구조공사.md",
+    "chars": 3202,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/kcs/KCS_21_50_거푸집동바리.txt",
+    "filename": "KCS_21_50_거푸집동바리.txt",
+    "path": "opencrab_ingest/sources/raw__kcs__KCS_21_50_거푸집동바리.md",
+    "chars": 2332,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/kcs/KCS_21_60_비계가시설.txt",
+    "filename": "KCS_21_60_비계가시설.txt",
+    "path": "opencrab_ingest/sources/raw__kcs__KCS_21_60_비계가시설.md",
+    "chars": 2451,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_B_0801_인장시험편.txt",
+    "filename": "KS_B_0801_인장시험편.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_B_0801_인장시험편.md",
+    "chars": 1093,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_B_0802_인장시험방법.txt",
+    "filename": "KS_B_0802_인장시험방법.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_B_0802_인장시험방법.md",
+    "chars": 1229,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_B_0896_강용접부UT.txt",
+    "filename": "KS_B_0896_강용접부UT.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_B_0896_강용접부UT.md",
+    "chars": 1406,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_D_3503_일반구조용강재.txt",
+    "filename": "KS_D_3503_일반구조용강재.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_D_3503_일반구조용강재.md",
+    "chars": 1208,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_D_3504_철근봉강.txt",
+    "filename": "KS_D_3504_철근봉강.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_D_3504_철근봉강.md",
+    "chars": 1745,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_F_2402_슬럼프시험.txt",
+    "filename": "KS_F_2402_슬럼프시험.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_F_2402_슬럼프시험.md",
+    "chars": 886,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_F_2403_공시체제작.txt",
+    "filename": "KS_F_2403_공시체제작.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_F_2403_공시체제작.md",
+    "chars": 810,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_F_2405_공시체압축강도시험.txt",
+    "filename": "KS_F_2405_공시체압축강도시험.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_F_2405_공시체압축강도시험.md",
+    "chars": 886,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_F_2526_콘크리트골재.txt",
+    "filename": "KS_F_2526_콘크리트골재.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_F_2526_콘크리트골재.md",
+    "chars": 1044,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/ks/KS_F_4009_레디믹스트콘크리트.txt",
+    "filename": "KS_F_4009_레디믹스트콘크리트.txt",
+    "path": "opencrab_ingest/sources/raw__ks__KS_F_4009_레디믹스트콘크리트.md",
+    "chars": 1044,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/laws/건설기술진흥법.txt",
+    "filename": "건설기술진흥법.txt",
+    "path": "opencrab_ingest/sources/raw__laws__건설기술진흥법.md",
+    "chars": 60623,
+    "chunks_original": 23
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/laws/건설기술진흥법_시행규칙.txt",
+    "filename": "건설기술진흥법_시행규칙.txt",
+    "path": "opencrab_ingest/sources/raw__laws__건설기술진흥법_시행규칙.md",
+    "chars": 37742,
+    "chunks_original": 15
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/laws/건설기술진흥법_시행령.txt",
+    "filename": "건설기술진흥법_시행령.txt",
+    "path": "opencrab_ingest/sources/raw__laws__건설기술진흥법_시행령.md",
+    "chars": 104574,
+    "chunks_original": 41
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/laws/산업안전보건법_건설관련.txt",
+    "filename": "산업안전보건법_건설관련.txt",
+    "path": "opencrab_ingest/sources/raw__laws__산업안전보건법_건설관련.md",
+    "chars": 27625,
+    "chunks_original": 11
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/laws/시설물안전법.txt",
+    "filename": "시설물안전법.txt",
+    "path": "opencrab_ingest/sources/raw__laws__시설물안전법.md",
+    "chars": 37364,
+    "chunks_original": 15
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/laws/시설물안전법_시행규칙.txt",
+    "filename": "시설물안전법_시행규칙.txt",
+    "path": "opencrab_ingest/sources/raw__laws__시설물안전법_시행규칙.md",
+    "chars": 17608,
+    "chunks_original": 7
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/laws/시설물안전법_시행령.txt",
+    "filename": "시설물안전법_시행령.txt",
+    "path": "opencrab_ingest/sources/raw__laws__시설물안전법_시행령.md",
+    "chars": 24697,
+    "chunks_original": 11
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/KCS_10_10_공통공사_일반사항.txt",
+    "filename": "KCS_10_10_공통공사_일반사항.txt",
+    "path": "opencrab_ingest/sources/raw__standards__KCS_10_10_공통공사_일반사항.md",
+    "chars": 2288,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/KCS_14_20_콘크리트공사.txt",
+    "filename": "KCS_14_20_콘크리트공사.txt",
+    "path": "opencrab_ingest/sources/raw__standards__KCS_14_20_콘크리트공사.md",
+    "chars": 2086,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/KCS_14_31_강구조공사.txt",
+    "filename": "KCS_14_31_강구조공사.txt",
+    "path": "opencrab_ingest/sources/raw__standards__KCS_14_31_강구조공사.md",
+    "chars": 2147,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/KDS_14_20_콘크리트구조.txt",
+    "filename": "KDS_14_20_콘크리트구조.txt",
+    "path": "opencrab_ingest/sources/raw__standards__KDS_14_20_콘크리트구조.md",
+    "chars": 2501,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/kcs/KCS_11_30_연약지반.txt",
+    "filename": "KCS_11_30_연약지반.txt",
+    "path": "opencrab_ingest/sources/raw__standards__kcs__KCS_11_30_연약지반.md",
+    "chars": 2278,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/kcs/KCS_14_20_콘크리트공사.txt",
+    "filename": "KCS_14_20_콘크리트공사.txt",
+    "path": "opencrab_ingest/sources/raw__standards__kcs__KCS_14_20_콘크리트공사.md",
+    "chars": 3107,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/kcs/KCS_14_31_강구조공사.txt",
+    "filename": "KCS_14_31_강구조공사.txt",
+    "path": "opencrab_ingest/sources/raw__standards__kcs__KCS_14_31_강구조공사.md",
+    "chars": 3202,
+    "chunks_original": 2
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/kcs/KCS_21_50_거푸집동바리.txt",
+    "filename": "KCS_21_50_거푸집동바리.txt",
+    "path": "opencrab_ingest/sources/raw__standards__kcs__KCS_21_50_거푸집동바리.md",
+    "chars": 2332,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/kcs/KCS_21_60_비계가시설.txt",
+    "filename": "KCS_21_60_비계가시설.txt",
+    "path": "opencrab_ingest/sources/raw__standards__kcs__KCS_21_60_비계가시설.md",
+    "chars": 2451,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_B_0801_인장시험편.txt",
+    "filename": "KS_B_0801_인장시험편.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_B_0801_인장시험편.md",
+    "chars": 1093,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_B_0802_인장시험방법.txt",
+    "filename": "KS_B_0802_인장시험방법.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_B_0802_인장시험방법.md",
+    "chars": 1229,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_B_0896_강용접부UT.txt",
+    "filename": "KS_B_0896_강용접부UT.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_B_0896_강용접부UT.md",
+    "chars": 1406,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_D_3503_일반구조용강재.txt",
+    "filename": "KS_D_3503_일반구조용강재.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_D_3503_일반구조용강재.md",
+    "chars": 1208,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_D_3504_철근봉강.txt",
+    "filename": "KS_D_3504_철근봉강.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_D_3504_철근봉강.md",
+    "chars": 1745,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_F_2402_슬럼프시험.txt",
+    "filename": "KS_F_2402_슬럼프시험.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_F_2402_슬럼프시험.md",
+    "chars": 886,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_F_2403_공시체제작.txt",
+    "filename": "KS_F_2403_공시체제작.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_F_2403_공시체제작.md",
+    "chars": 810,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_F_2405_공시체압축강도시험.txt",
+    "filename": "KS_F_2405_공시체압축강도시험.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_F_2405_공시체압축강도시험.md",
+    "chars": 886,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_F_2526_콘크리트골재.txt",
+    "filename": "KS_F_2526_콘크리트골재.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_F_2526_콘크리트골재.md",
+    "chars": 1044,
+    "chunks_original": 1
+  },
+  {
+    "source_id": "civil-engineering-pack/raw/standards/ks/KS_F_4009_레디믹스트콘크리트.txt",
+    "filename": "KS_F_4009_레디믹스트콘크리트.txt",
+    "path": "opencrab_ingest/sources/raw__standards__ks__KS_F_4009_레디믹스트콘크리트.md",
+    "chars": 1044,
+    "chunks_original": 1
+  }
+]

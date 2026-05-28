@@ -1,0 +1,1415 @@
+# Extracted graph — KS__part01.jsonl
+
+_source jsonl: KS__part01.jsonl_
+
+## Nodes
+
+## Node — SiteEngineer / `SiteEngineer:ks_site_engineer_01`
+- space: `subject`
+- node_type: `SiteEngineer`
+- source_article: KS general
+- properties:
+  - `name_ko`: 현장 시공자(시험 의뢰자)
+  - `duties`: ["KS 시험 의뢰", "공시체 채취 입회", "시험성적서 수령"]
+
+## Node — Supervisor / `Supervisor:ks_supervisor_01`
+- space: `subject`
+- node_type: `Supervisor`
+- source_article: KS general
+- properties:
+  - `name_ko`: 감리원(자재 검수 담당)
+  - `duties`: ["KS 적합 자재 확인", "시험성적서 검토", "검수 결정"]
+
+## Node — ChiefSupervisor / `ChiefSupervisor:ks_chief_supervisor_01`
+- space: `subject`
+- node_type: `ChiefSupervisor`
+- source_article: KS general
+- properties:
+  - `name_ko`: 책임감리원
+  - `duties`: ["자재 최종 승인", "불합격 자재 반출 지시", "감리보고서 결재"]
+
+## Node — Qualification / `Qualification:ks_qual_site_engineer_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS general
+- properties:
+  - `name_ko`: 현장기술자
+  - `scope`: KS 시험 의뢰 및 입회
+
+## Node — Qualification / `Qualification:ks_qual_supervisor_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS general
+- properties:
+  - `name_ko`: 감리원 자격
+  - `scope`: KS F·KS D 기반 자재 검수 결정
+  - `reference_law`: 건설기술 진흥법 시행령 제55조
+
+## Node — Qualification / `Qualification:ks_qual_chief_supervisor_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS general
+- properties:
+  - `name_ko`: 책임감리원 자격
+  - `scope`: KS 기반 자재 최종 승인
+
+## Node — Qualification / `Qualification:ks_qual_ndt_ut_level2_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS B 0896
+- properties:
+  - `name_ko`: 비파괴검사기술자 UT 레벨 2 이상
+  - `scope`: KS B 0896 강용접부 초음파 탐상
+  - `reference_standard`: KS A 0035
+
+## Node — WorkType / `WorkType:ks_worktype_concrete_01`
+- space: `concept`
+- node_type: `WorkType`
+- source_article: KS F 4009/2402/2403/2405/2526
+- properties:
+  - `name_ko`: 콘크리트 공사 (자재·시험)
+
+## Node — WorkType / `WorkType:ks_worktype_rebar_01`
+- space: `concept`
+- node_type: `WorkType`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 철근 공사 (자재·시험)
+
+## Node — WorkType / `WorkType:ks_worktype_steel_struct_01`
+- space: `concept`
+- node_type: `WorkType`
+- source_article: KS D 3503
+- properties:
+  - `name_ko`: 강구조 공사 (자재·시험)
+
+## Node — WorkType / `WorkType:ks_worktype_weld_ut_01`
+- space: `concept`
+- node_type: `WorkType`
+- source_article: KS B 0896
+- properties:
+  - `name_ko`: 강용접부 초음파 탐상
+
+## Node — StructuralComponent / `StructuralComponent:ks_component_concrete_01`
+- space: `concept`
+- node_type: `StructuralComponent`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 콘크리트 부재
+
+## Node — StructuralComponent / `StructuralComponent:ks_component_rebar_01`
+- space: `concept`
+- node_type: `StructuralComponent`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 철근(이형철근·원형철근)
+
+## Node — StructuralComponent / `StructuralComponent:ks_component_steel_01`
+- space: `concept`
+- node_type: `StructuralComponent`
+- source_article: KS D 3503
+- properties:
+  - `name_ko`: 압연 강재(강판·형강·평강)
+
+## Node — StructuralComponent / `StructuralComponent:ks_component_weld_01`
+- space: `concept`
+- node_type: `StructuralComponent`
+- source_article: KS B 0896
+- properties:
+  - `name_ko`: 맞대기 용접부
+
+## Node — Specification / `Specification:ks_f_4009_main_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: KS F 4009 레디믹스트 콘크리트
+  - `standard_no`: KS F 4009
+  - `scope`: 레미콘 종류·품질·시험·검사·운반·인도
+
+## Node — Specification / `Specification:ks_f_4009_strength_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 압축강도 합격 판정
+  - `standard_no`: KS F 4009
+  - `criterion`: 재령 28일 압축강도 ≥ 호칭강도
+  - `rule_under_35MPa`: 1회 시험치 ≥ 호칭강도 - 3.5 MPa
+  - `rule_over_35MPa`: 1회 시험치 ≥ 호칭강도 × 0.9
+  - `test_age_days`: 28
+
+## Node — Specification / `Specification:ks_f_4009_slump_tol_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 슬럼프 허용차
+  - `standard_no`: KS F 4009
+  - `tolerance_slump_25mm`: ±10 mm
+  - `tolerance_slump_50_65mm`: ±15 mm
+  - `tolerance_slump_80mm_plus`: ±25 mm
+  - `tolerance_slump_flow_500_600_700`: ±100 mm
+
+## Node — Specification / `Specification:ks_f_4009_air_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 공기량 허용차
+  - `standard_no`: KS F 4009
+  - `normal_concrete`: 4.5 ± 1.5 %
+  - `lightweight_concrete`: 5.0 ± 1.5 %
+  - `pavement_concrete`: 4.5 ± 1.5 %
+  - `high_strength_concrete`: 3.5 ± 1.5 %
+
+## Node — Specification / `Specification:ks_f_4009_chloride_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 염화물 함유량 한도
+  - `standard_no`: KS F 4009
+  - `limit_default_kg_per_m3`: 0.3
+  - `limit_with_approval_kg_per_m3`: 0.6
+  - `ion`: Cl-
+
+## Node — Specification / `Specification:ks_f_4009_transport_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 운반 시간 한도
+  - `standard_no`: KS F 4009
+  - `limit_under_25C_hours`: 1.5
+  - `limit_over_25C_hours`: 1.0
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_4009_decision_strength_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 레미콘 압축강도 합격 판정
+  - `criterion_source`: KS F 4009
+  - `test_age_days`: 28
+  - `decision_basis`: 공시체 압축강도 시험 결과
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_4009_decision_slump_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 레미콘 슬럼프 검수
+  - `criterion_source`: KS F 4009
+  - `field_test`: True
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_4009_decision_air_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 레미콘 공기량 검수
+  - `criterion_source`: KS F 4009
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_4009_decision_chloride_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 레미콘 염화물 검수
+  - `criterion_source`: KS F 4009
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_4009_outcome_strength_pass_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 압축강도 합격
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_4009_outcome_strength_fail_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 압축강도 불합격
+  - `result`: fail
+  - `action`: 추가 공시체 시험 또는 구조물 재하시험·코어 채취
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_4009_outcome_slump_pass_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 슬럼프 적합
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_4009_outcome_slump_fail_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 슬럼프 부적합
+  - `result`: fail
+  - `action`: 타설 거부·반품
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_4009_outcome_air_pass_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 공기량 적합
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_4009_outcome_chloride_fail_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 염화물 초과 — 반품
+  - `result`: fail
+  - `action`: 0.30 kg/m³ 초과(승인 0.60 kg/m³ 초과 시) 반품
+
+## Node — TestReport / `TestReport:ks_f_4009_report_slump_01`
+- space: `resource`
+- node_type: `TestReport`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 슬럼프 시험 성적서
+  - `linked_method`: KS F 2402
+
+## Node — TestReport / `TestReport:ks_f_4009_report_strength_01`
+- space: `resource`
+- node_type: `TestReport`
+- source_article: KS F 4009
+- properties:
+  - `name_ko`: 압축강도 시험 성적서
+  - `linked_method`: KS F 2405
+
+## Node — Specification / `Specification:ks_f_2403_main_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: KS F 2403 콘크리트 공시체 제작 방법
+  - `standard_no`: KS F 2403
+  - `scope`: 강도 시험용 공시체 제작·양생
+
+## Node — Specification / `Specification:ks_f_2403_size_cyl_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: 원주형 공시체 표준 치수
+  - `standard_no`: KS F 2403
+  - `size_standard_mm`: φ150 × 300
+  - `size_alt_mm`: φ100 × 200
+  - `ratio_d_to_h`: 1:2
+  - `min_diameter_vs_max_agg`: 3배 이상
+
+## Node — Specification / `Specification:ks_f_2403_size_prism_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: 각주형 공시체 (휨) 표준 치수
+  - `standard_no`: KS F 2403
+  - `size_mm`: 150 × 150 × 530
+  - `span_mm`: 450
+
+## Node — Specification / `Specification:ks_f_2403_curing_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: 표준 양생 조건
+  - `standard_no`: KS F 2403
+  - `temperature_c`: 20 ± 2
+  - `relative_humidity_pct`: ≥ 95
+  - `demold_hours_range`: 16 ~ 72
+
+## Node — Specification / `Specification:ks_f_2403_compaction_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: 다짐 방법
+  - `standard_no`: KS F 2403
+  - `rod_diameter_mm`: 16
+  - `layers`: 3
+  - `strokes_phi150`: 25
+  - `strokes_phi100`: 15
+  - `vibration_required_slump_below_mm`: 50
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_2403_decision_specimen_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: 공시체 제작 적합성 확인
+  - `criterion_source`: KS F 2403
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2403_outcome_pass_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: 공시체 적합
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2403_outcome_fail_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2403
+- properties:
+  - `name_ko`: 공시체 부적합 — 재채취
+  - `result`: fail
+  - `action`: 공시체 재제작
+
+## Node — Specification / `Specification:ks_f_2405_main_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: KS F 2405 콘크리트 압축강도 시험 방법
+  - `standard_no`: KS F 2405
+
+## Node — Specification / `Specification:ks_f_2405_loading_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: 재하 속도
+  - `standard_no`: KS F 2405
+  - `loading_rate_mpa_per_s`: 0.6 ± 0.4
+  - `range_mpa_per_s`: 0.2 ~ 1.0
+
+## Node — Specification / `Specification:ks_f_2405_age_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: 시험 재령
+  - `standard_no`: KS F 2405
+  - `standard_age_days`: 28
+  - `early_age_days_list`: [3, 7]
+  - `long_age_days_list`: [56, 91]
+
+## Node — Specification / `Specification:ks_f_2405_hd_correction_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: h/d 비 보정계수
+  - `standard_no`: KS F 2405
+  - `hd_2_0`: 1.0
+  - `hd_1_75`: 0.98
+  - `hd_1_50`: 0.96
+  - `hd_1_25`: 0.93
+  - `hd_1_00`: 0.87
+
+## Node — Specification / `Specification:ks_f_2405_precision_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: 정밀도 기준
+  - `standard_no`: KS F 2405
+  - `machine_accuracy_pct`: 1.0
+  - `platen_flatness_mm`: 0.02
+  - `specimen_end_flatness_mm`: 0.05
+  - `specimen_axis_squareness_deg`: 0.5
+  - `outlier_rule_pct`: 15
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: 압축강도 시험 적합 판정
+  - `criterion_source`: KS F 2405
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2405_outcome_valid_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: 시험 유효
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2405_outcome_invalid_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2405
+- properties:
+  - `name_ko`: 시험 무효
+  - `result`: fail
+  - `action`: 재시험 또는 이상치 제외
+
+## Node — Specification / `Specification:ks_f_2402_main_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2402
+- properties:
+  - `name_ko`: KS F 2402 슬럼프 시험 방법
+  - `standard_no`: KS F 2402
+
+## Node — Specification / `Specification:ks_f_2402_cone_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2402
+- properties:
+  - `name_ko`: 슬럼프 콘 치수
+  - `standard_no`: KS F 2402
+  - `top_diameter_mm`: 100
+  - `bottom_diameter_mm`: 200
+  - `height_mm`: 300
+  - `thickness_min_mm`: 1.5
+
+## Node — Specification / `Specification:ks_f_2402_rod_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2402
+- properties:
+  - `name_ko`: 다짐봉 규격
+  - `standard_no`: KS F 2402
+  - `diameter_mm`: 16
+  - `length_mm`: 600
+  - `tip`: 반구형
+
+## Node — Specification / `Specification:ks_f_2402_procedure_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2402
+- properties:
+  - `name_ko`: 다짐 절차
+  - `standard_no`: KS F 2402
+  - `layers`: 3
+  - `strokes_per_layer`: 25
+  - `cone_lift_time_sec`: 2 ~ 5
+  - `test_window_min`: 5
+  - `reading_unit_mm`: 5
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 2402
+- properties:
+  - `name_ko`: 슬럼프 시험 적합 판정
+  - `criterion_source`: KS F 2402
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2402_outcome_valid_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2402
+- properties:
+  - `name_ko`: 시험 유효
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2402_outcome_invalid_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2402
+- properties:
+  - `name_ko`: 전단 파괴 — 재시험
+  - `result`: fail
+
+## Node — Specification / `Specification:ks_f_2526_main_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: KS F 2526 콘크리트용 골재
+  - `standard_no`: KS F 2526
+
+## Node — Specification / `Specification:ks_f_2526_fine_quality_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 잔골재 품질 기준
+  - `standard_no`: KS F 2526
+  - `abs_dry_density_min_g_cm3`: 2.5
+  - `absorption_max_pct`: 3.0
+  - `soundness_Na2SO4_max_pct`: 10
+  - `pass_0_08mm_max_pct_concrete`: 3.0
+  - `pass_0_08mm_max_pct_mortar`: 5.0
+  - `clay_lumps_max_pct`: 1.0
+  - `chloride_NaCl_max_pct`: 0.04
+  - `fineness_modulus_range`: 2.3 ~ 3.1
+
+## Node — Specification / `Specification:ks_f_2526_coarse_quality_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 굵은 골재 품질 기준
+  - `standard_no`: KS F 2526
+  - `abs_dry_density_min_g_cm3`: 2.5
+  - `absorption_max_pct`: 3.0
+  - `soundness_Na2SO4_max_pct`: 12
+  - `abrasion_LA_max_pct_general`: 40
+  - `abrasion_LA_max_pct_pavement`: 25
+  - `pass_0_08mm_max_pct`: 1.0
+  - `clay_lumps_max_pct`: 0.25
+  - `soft_particles_max_pct`: 5.0
+
+## Node — Specification / `Specification:ks_f_2526_coarse_gradation_25_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 굵은 골재 표준 입도 (최대치수 25 mm)
+  - `standard_no`: KS F 2526
+  - `pass_25mm_pct_range`: 90 ~ 100
+  - `pass_19mm_pct_range`: 20 ~ 55
+  - `pass_10mm_pct_range`: 0 ~ 10
+  - `pass_5mm_pct_range`: 0 ~ 5
+
+## Node — Specification / `Specification:ks_f_2526_max_size_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 굵은 골재 최대치수 제한
+  - `standard_no`: KS F 2526
+  - `rule_member_min_dim`: 부재 최소치수의 1/5 이하
+  - `rule_rebar_spacing`: 철근 최소간격의 3/4 이하
+  - `rule_slab_thickness`: 슬래브 두께의 1/3 이하
+
+## Node — Specification / `Specification:ks_f_2526_asr_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 알칼리-실리카 반응성 평가
+  - `standard_no`: KS F 2526
+  - `chem_method_ref`: KS F 2545
+  - `mortar_bar_method_ref`: KS F 2546
+  - `required_result`: 무해(innocuous)
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 잔골재 검수 판정
+  - `criterion_source`: KS F 2526
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 굵은 골재 검수 판정
+  - `criterion_source`: KS F 2526
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2526_outcome_pass_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 골재 적합
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_f_2526_outcome_fail_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS F 2526
+- properties:
+  - `name_ko`: 골재 부적합 — 반입 거절
+  - `result`: fail
+  - `action`: 반품 또는 사용 금지
+
+## Node — Specification / `Specification:ks_d_3504_main_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: KS D 3504 철근콘크리트용 봉강
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd300_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD300 등급
+  - `grade`: SD300
+  - `fy_min_mpa`: 300
+  - `fu_min_mpa`: 440
+  - `elongation_min_pct`: 16
+  - `usage`: 일반용
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd400_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD400 등급
+  - `grade`: SD400
+  - `fy_min_mpa`: 400
+  - `fu_min_mpa`: 560
+  - `elongation_min_pct`: 16
+  - `usage`: 일반용
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd500_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD500 등급
+  - `grade`: SD500
+  - `fy_min_mpa`: 500
+  - `fu_min_mpa`: 620
+  - `elongation_min_pct`: 12
+  - `usage`: 일반용
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd600_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD600 등급
+  - `grade`: SD600
+  - `fy_min_mpa`: 600
+  - `fu_min_mpa`: 710
+  - `elongation_min_pct`: 10
+  - `usage`: 고강도
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd400w_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD400W (용접용)
+  - `grade`: SD400W
+  - `fy_range_mpa`: 400 ~ 520
+  - `fu_min_mpa`: 560
+  - `ceq_max_pct`: 0.5
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd500w_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD500W (용접용)
+  - `grade`: SD500W
+  - `fy_range_mpa`: 500 ~ 620
+  - `fu_min_mpa`: 620
+  - `ceq_max_pct`: 0.5
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd400s_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD400S (내진용)
+  - `grade`: SD400S
+  - `yield_ratio_max`: 1.25
+  - `fy_overshoot_max_mpa`: 130
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd500s_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD500S (내진용)
+  - `grade`: SD500S
+  - `yield_ratio_max`: 1.25
+  - `fy_overshoot_max_mpa`: 130
+  - `standard_no`: KS D 3504
+
+## Node — Qualification / `Qualification:ks_d_3504_grade_sd600s_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: SD600S (내진용)
+  - `grade`: SD600S
+  - `yield_ratio_max`: 1.25
+  - `fy_overshoot_max_mpa`: 130
+  - `standard_no`: KS D 3504
+
+## Node — Specification / `Specification:ks_d_3504_diameters_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 이형철근 호칭 지름 및 단위 질량
+  - `standard_no`: KS D 3504
+  - `table`: [{"name": "D10", "d_mm": 9.53, "area_mm2": 71.33, "mass_kg_per_m": 0.56}, {"name": "D13", "d_mm": 12.7, "area_mm2": 126.7, "mass_kg_per_m": 0.995}, {"name": "D16", "d_mm": 15.9, "area_mm2": 198.6, "mass_kg_per_m": 1.56}, {"name": "D19", "d_mm": 19.1, "area_mm2": 286.5, "mass_kg_per_m": 2.25}, {"name": "D22", "d_mm": 22.2, "area_mm2": 387.1, "mass_kg_per_m": 3.04}, {"name": "D25", "d_mm": 25.4, "area_mm2": 506.7, "mass_kg_per_m": 3.98}, {"name": "D29", "d_mm": 28.6, "area_mm2": 642.4, "mass_kg_per_m": 5.04}, {"name": "D32", "d_mm": 31.8, "area_mm2": 794.2, "mass_kg_per_m": 6.23}, {"name": "D35", "d_mm": 34.9, "area_mm2": 956.6, "mass_kg_per_m": 7.51}, {"name": "D38", "d_mm": 38.1, "area_mm2": 1140, "mass_kg_per_m": 8.95}, {"name": "D41", "d_mm": 41.3, "area_mm2": 1340, "mass_kg_per_m": 10.5}, {"name": "D51", "d_mm": 50.8, "area_mm2": 2027, "mass_kg_per_m": 15.9}]
+
+## Node — Specification / `Specification:ks_d_3504_chem_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 화학 성분 한도 (SD400 일반)
+  - `standard_no`: KS D 3504
+  - `C_max_pct`: 0.3
+  - `P_max_pct`: 0.04
+  - `S_max_pct`: 0.04
+  - `Ceq_max_pct_general`: 0.55
+  - `Ceq_max_pct_weldable`: 0.5
+
+## Node — Specification / `Specification:ks_d_3504_bend_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 굽힘 시험 기준
+  - `standard_no`: KS D 3504
+  - `angle_deg`: 180
+  - `inner_diameter_d16_sd300_400`: 3d
+  - `inner_diameter_d16_sd500`: 4d
+  - `inner_diameter_d19_sd300_400`: 4d
+  - `inner_diameter_d19_sd500`: 5d
+  - `inner_diameter_d19_sd600`: 6d
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_d_3504_decision_grade_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 철근 종류·강도 검수
+  - `criterion_source`: KS D 3504
+
+## Node — MaterialReceiptDecision / `MaterialReceiptDecision:ks_d_3504_decision_bend_01`
+- space: `decision`
+- node_type: `MaterialReceiptDecision`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 철근 굽힘 시험 판정
+  - `criterion_source`: KS D 3504
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_d_3504_outcome_pass_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 철근 적합
+  - `result`: pass
+
+## Node — DecisionOutcome / `DecisionOutcome:ks_d_3504_outcome_fail_01`
+- space: `outcome`
+- node_type: `DecisionOutcome`
+- source_article: KS D 3504
+- properties:
+  - `name_ko`: 철근 부적합 — 반품
+  - `result`: fail
+
+## Node — Specification / `Specification:ks_d_3503_main_01`
+- space: `resource`
+- node_type: `Specification`
+- source_article: KS D 3503
+- properties:
+  - `name_ko`: KS D 3503 일반 구조용 압연 강재
+  - `standard_no`: KS D 3503
+
+## Node — Qualification / `Qualification:ks_d_3503_grade_ss235_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3503
+- properties:
+  - `name_ko`: SS235 등급
+  - `grade`: SS235
+  - `fy_min_mpa`: 235
+  - `fu_range_mpa`: 330 ~ 450
+  - `standard_no`: KS D 3503
+
+## Node — Qualification / `Qualification:ks_d_3503_grade_ss275_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3503
+- properties:
+  - `name_ko`: SS275 등급
+  - `grade`: SS275
+  - `fy_min_mpa`: 275
+  - `fu_range_mpa`: 410 ~ 550
+  - `standard_no`: KS D 3503
+
+## Node — Qualification / `Qualification:ks_d_3503_grade_ss315_01`
+- space: `concept`
+- node_type: `Qualification`
+- source_article: KS D 3503
+- properties:
+  - `name_ko`: SS315 등급
+  - `grade`: SS315
+  - `fy_min_mpa`: 315
+  - `fu_range_mpa`: 490 ~ 630
+  - `standard_no`: KS D 3503
+
+## Edges
+
+## Edge — `qualified_as`
+- from: `SiteEngineer:ks_site_engineer_01` (subject)
+- to: `Qualification:ks_qual_site_engineer_01` (concept)
+- source_article: KS general
+
+## Edge — `qualified_as`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `Qualification:ks_qual_supervisor_01` (concept)
+- source_article: KS general
+
+## Edge — `qualified_as`
+- from: `ChiefSupervisor:ks_chief_supervisor_01` (subject)
+- to: `Qualification:ks_qual_chief_supervisor_01` (concept)
+- source_article: KS general
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_air_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_chloride_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_air_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_chloride_01` (decision)
+- source_article: KS F 4009
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- to: `Specification:ks_f_4009_strength_01` (resource)
+- source_article: KS F 4009
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- to: `Specification:ks_f_4009_slump_tol_01` (resource)
+- source_article: KS F 4009
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_air_01` (decision)
+- to: `Specification:ks_f_4009_air_01` (resource)
+- source_article: KS F 4009
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_chloride_01` (decision)
+- to: `Specification:ks_f_4009_chloride_01` (resource)
+- source_article: KS F 4009
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- to: `TestReport:ks_f_4009_report_slump_01` (resource)
+- source_article: KS F 4009
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- to: `TestReport:ks_f_4009_report_strength_01` (resource)
+- source_article: KS F 4009
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_air_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_air_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_chloride_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_chloride_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 4009
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- to: `DecisionOutcome:ks_f_4009_outcome_strength_pass_01` (outcome)
+- source_article: KS F 4009
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- to: `DecisionOutcome:ks_f_4009_outcome_strength_fail_01` (outcome)
+- source_article: KS F 4009
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- to: `DecisionOutcome:ks_f_4009_outcome_slump_pass_01` (outcome)
+- source_article: KS F 4009
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- to: `DecisionOutcome:ks_f_4009_outcome_slump_fail_01` (outcome)
+- source_article: KS F 4009
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_air_01` (decision)
+- to: `DecisionOutcome:ks_f_4009_outcome_air_pass_01` (outcome)
+- source_article: KS F 4009
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_chloride_01` (decision)
+- to: `DecisionOutcome:ks_f_4009_outcome_chloride_fail_01` (outcome)
+- source_article: KS F 4009
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- source_article: KS F 2403
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- source_article: KS F 2403
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `Specification:ks_f_2403_size_cyl_01` (resource)
+- source_article: KS F 2403
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `Specification:ks_f_2403_curing_01` (resource)
+- source_article: KS F 2403
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `Specification:ks_f_2403_compaction_01` (resource)
+- source_article: KS F 2403
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 2403
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 2403
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `DecisionOutcome:ks_f_2403_outcome_pass_01` (outcome)
+- source_article: KS F 2403
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `DecisionOutcome:ks_f_2403_outcome_fail_01` (outcome)
+- source_article: KS F 2403
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- source_article: KS F 2405
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- source_article: KS F 2405
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `Specification:ks_f_2405_loading_01` (resource)
+- source_article: KS F 2405
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `Specification:ks_f_2405_age_01` (resource)
+- source_article: KS F 2405
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `Specification:ks_f_2405_hd_correction_01` (resource)
+- source_article: KS F 2405
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `Specification:ks_f_2405_precision_01` (resource)
+- source_article: KS F 2405
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 2405
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 2405
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `DecisionOutcome:ks_f_2405_outcome_valid_01` (outcome)
+- source_article: KS F 2405
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `DecisionOutcome:ks_f_2405_outcome_invalid_01` (outcome)
+- source_article: KS F 2405
+
+## Edge — `precedes`
+- from: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- source_article: KS F 2403 / KS F 2405
+
+## Edge — `depends_on`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_2403_decision_specimen_01` (decision)
+- source_article: KS F 2403 / KS F 2405
+
+## Edge — `precedes`
+- from: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- source_article: KS F 2405 / KS F 4009
+
+## Edge — `depends_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_2405_decision_strength_test_01` (decision)
+- source_article: KS F 2405 / KS F 4009
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_site_engineer_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- source_article: KS F 2402
+
+## Edge — `performs`
+- from: `SiteEngineer:ks_site_engineer_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- source_article: KS F 2402
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `Specification:ks_f_2402_cone_01` (resource)
+- source_article: KS F 2402
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `Specification:ks_f_2402_procedure_01` (resource)
+- source_article: KS F 2402
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `Specification:ks_f_2402_rod_01` (resource)
+- source_article: KS F 2402
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 2402
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 2402
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `DecisionOutcome:ks_f_2402_outcome_valid_01` (outcome)
+- source_article: KS F 2402
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `DecisionOutcome:ks_f_2402_outcome_invalid_01` (outcome)
+- source_article: KS F 2402
+
+## Edge — `precedes`
+- from: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- source_article: KS F 2402 / KS F 4009
+
+## Edge — `depends_on`
+- from: `MaterialReceiptDecision:ks_f_4009_decision_slump_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_2402_decision_slump_test_01` (decision)
+- source_article: KS F 2402 / KS F 4009
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- source_article: KS F 2526
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- source_article: KS F 2526
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- source_article: KS F 2526
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- source_article: KS F 2526
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- to: `Specification:ks_f_2526_fine_quality_01` (resource)
+- source_article: KS F 2526
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `Specification:ks_f_2526_coarse_quality_01` (resource)
+- source_article: KS F 2526
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `Specification:ks_f_2526_coarse_gradation_25_01` (resource)
+- source_article: KS F 2526
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `Specification:ks_f_2526_max_size_01` (resource)
+- source_article: KS F 2526
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- to: `Specification:ks_f_2526_asr_01` (resource)
+- source_article: KS F 2526
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `Specification:ks_f_2526_asr_01` (resource)
+- source_article: KS F 2526
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 2526
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 2526
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- to: `DecisionOutcome:ks_f_2526_outcome_pass_01` (outcome)
+- source_article: KS F 2526
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- to: `DecisionOutcome:ks_f_2526_outcome_fail_01` (outcome)
+- source_article: KS F 2526
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `StructuralComponent:ks_component_concrete_01` (concept)
+- source_article: KS F 2526
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `WorkType:ks_worktype_concrete_01` (concept)
+- source_article: KS F 2526
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `DecisionOutcome:ks_f_2526_outcome_pass_01` (outcome)
+- source_article: KS F 2526
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `DecisionOutcome:ks_f_2526_outcome_fail_01` (outcome)
+- source_article: KS F 2526
+
+## Edge — `precedes`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_fine_agg_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- source_article: KS F 2526 / KS F 4009
+
+## Edge — `precedes`
+- from: `MaterialReceiptDecision:ks_f_2526_decision_coarse_agg_01` (decision)
+- to: `MaterialReceiptDecision:ks_f_4009_decision_strength_01` (decision)
+- source_article: KS F 2526 / KS F 4009
+
+## Edge — `subclass_of`
+- from: `Qualification:ks_d_3504_grade_sd400s_01` (concept)
+- to: `Qualification:ks_d_3504_grade_sd400_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `subclass_of`
+- from: `Qualification:ks_d_3504_grade_sd500s_01` (concept)
+- to: `Qualification:ks_d_3504_grade_sd500_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `subclass_of`
+- from: `Qualification:ks_d_3504_grade_sd600s_01` (concept)
+- to: `Qualification:ks_d_3504_grade_sd600_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `subclass_of`
+- from: `Qualification:ks_d_3504_grade_sd400w_01` (concept)
+- to: `Qualification:ks_d_3504_grade_sd400_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `subclass_of`
+- from: `Qualification:ks_d_3504_grade_sd500w_01` (concept)
+- to: `Qualification:ks_d_3504_grade_sd500_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- source_article: KS D 3504
+
+## Edge — `grants_authority_for`
+- from: `Qualification:ks_qual_supervisor_01` (concept)
+- to: `MaterialReceiptDecision:ks_d_3504_decision_bend_01` (decision)
+- source_article: KS D 3504
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- source_article: KS D 3504
+
+## Edge — `performs`
+- from: `Supervisor:ks_supervisor_01` (subject)
+- to: `MaterialReceiptDecision:ks_d_3504_decision_bend_01` (decision)
+- source_article: KS D 3504
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Specification:ks_d_3504_main_01` (resource)
+- source_article: KS D 3504
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Specification:ks_d_3504_main_01` (resource)
+- source_article: KS D 3504
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Specification:ks_d_3504_main_01` (resource)
+- source_article: KS D 3504
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Specification:ks_d_3504_main_01` (resource)
+- source_article: KS D 3504
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Qualification:ks_d_3504_grade_sd300_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Qualification:ks_d_3504_grade_sd400_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Qualification:ks_d_3504_grade_sd500_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Qualification:ks_d_3504_grade_sd600_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Specification:ks_d_3504_diameters_01` (resource)
+- source_article: KS D 3504
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `Specification:ks_d_3504_chem_01` (resource)
+- source_article: KS D 3504
+
+## Edge — `based_on`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_bend_01` (decision)
+- to: `Specification:ks_d_3504_bend_01` (resource)
+- source_article: KS D 3504
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `StructuralComponent:ks_component_rebar_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `WorkType:ks_worktype_rebar_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `targets_component`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_bend_01` (decision)
+- to: `StructuralComponent:ks_component_rebar_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `targets_work_type`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_bend_01` (decision)
+- to: `WorkType:ks_worktype_rebar_01` (concept)
+- source_article: KS D 3504
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `DecisionOutcome:ks_d_3504_outcome_pass_01` (outcome)
+- source_article: KS D 3504
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_grade_01` (decision)
+- to: `DecisionOutcome:ks_d_3504_outcome_fail_01` (outcome)
+- source_article: KS D 3504
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_bend_01` (decision)
+- to: `DecisionOutcome:ks_d_3504_outcome_pass_01` (outcome)
+- source_article: KS D 3504
+
+## Edge — `yields`
+- from: `MaterialReceiptDecision:ks_d_3504_decision_bend_01` (decision)
+- to: `DecisionOutcome:ks_d_3504_outcome_fail_01` (outcome)
+- source_article: KS D 3504

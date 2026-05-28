@@ -1,3 +1,0 @@
-{"kind": "edge", "relation": "yields", "properties": {}, "source_article": "6.3(1)마⑥", "from_space": "decision", "from_id": "SafetyInspectionDecision:safety_permit_guide_sec6_9", "to_space": "outcome", "to_id": "DecisionOutcome:gas-fail"}
-{"kind": "edge", "relation": "yields", "properties": {"meaning": "보충작업 병행 시 조건부 허가"}, "source_article": "6.1(2)", "from_space": "decision", "from_id": "WorkPermitDecision:safety_permit_guide_sec6_1", "to_space": "outcome", "to_id": "DecisionOutcome:conditional-pass"}
-{"kind": "edge", "relation": "yields", "properties": {"meaning": "보충작업 병행 시 조건부 허가"}, "source_article": "6.2(2)", "from_space": "decision", "from_id": "WorkPermitDecision:safety_permit_guide_sec6_2", "to_space": "outcome", "to_id": "DecisionOutcome:conditional-pass"}

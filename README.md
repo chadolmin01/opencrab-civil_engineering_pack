@@ -1,45 +1,49 @@
-# civil_engineering — OpenCRAB ontology pack (7 use-case sub-packs)
+# civil_engineering — OpenCRAB ontology pack (lifecycle-phase sub-packs)
 
-Korean civil-engineering qualified-actor decision ontology, split into seven semantic sub-packs designed to chain together inside an OpenCRAB Workflow.
+Korean civil-engineering qualified-actor decision ontology, split along **construction lifecycle phase** to give each sub-pack a clear, non-overlapping boundary.
 
-## Sub-packs (each independently ingestable)
+## Lifecycle phase axis (sub-pack layout)
 
-| Path | Role |
-|---|---|
-| [`civil-supervision-schema/`](./civil-supervision-schema) | Schema layer (26 types, 10 relations, 5 facet axes). Use first in any chain. |
-| [`civil-laws/`](./civil-laws) | Korean primary laws (건진법) |
-| [`civil-design-standards/`](./civil-design-standards) | KDS design standards (concrete/steel/geotech/seismic) |
-| [`civil-construction-process/`](./civil-construction-process) | KCS construction specs + supervision directives + inspection forms |
-| [`civil-materials-tests/`](./civil-materials-tests) | KS material + test standards + 자재검수일보 |
-| [`civil-safety-permits/`](./civil-safety-permits) | 산안법 + KOSHA P-94 + 작업허가서 |
-| [`civil-facility-diagnosis/`](./civil-facility-diagnosis) | 시특법 + 안전점검 보고서 |
+| Phase | Sub-pack | Inclusion rule |
+|---|---|---|
+| SCHEMA       | `civil-supervision-schema/`   | 26 node types + 10 relations + 5 facet axes — installed first as grammar layer |
+| DESIGN+      | `civil-laws/`                 | Korean primary statutes (건진법·시특법·산안법 본문 + 시행령·시행규칙) — cross-phase |
+| DESIGN       | `civil-design-standards/`     | KDS design standards (concrete, steel, geotech, seismic, scaffolding — civil only, KDS 41 excluded) |
+| MATERIAL     | `civil-materials-tests/`      | KS material + test standards (F·D·B) + 자재검수일보 |
+| CONSTRUCTION | `civil-construction-specs/`   | KCS construction specifications (시공 표준) |
+| CONSTRUCTION | `civil-supervision-process/`  | CM·감리·주택건설감리 지침 + 검측 체크리스트 + 시공일지 |
+| SAFETY       | `civil-safety-permits/`       | KOSHA P-94 + 작업허가서 + 산안법 건설 발췌 |
+| DIAGNOSIS    | `civil-facility-diagnosis/`   | 시특법 시설물 안전·유지관리 + 안전점검 보고서 + 정밀진단 |
 
-## Workflow chain example — 시공 의사결정 검증
+Each sub-pack carries:
+- `sources/` — raw markdown (laws, standards, directives, forms)
+- `extracted_nodes/` — grammar-validated nodes/edges from the seed graph, converted to per-record markdown
+
+## Workflow chain (example)
 
 ```
-input: 시공일지 한 단락
-  ↓ civil-supervision-schema  → 자격자·결정 type 분류
-  ↓ civil-construction-process → 시공 단계 매칭
-  ↓ civil-materials-tests      → 자재 검수 요건 확인
-  ↓ civil-design-standards     → 설계 기준 매칭
-  ↓ civil-safety-permits       → 안전·허가 위반 detect
-  ↓ civil-laws                 → 법령 조항 인용
-output: 검증 리포트 (누락된 결정 + 위반 조항 + 권장 조치 + 자격자 책임)
+input: 시공 자료 (시공일지·검측·작업허가서 등)
+  ↓ civil-supervision-schema    (그래머 layer)
+  ↓ civil-supervision-process   (시공·감리 절차)
+  ↓ civil-materials-tests       (자재 검수 요건)
+  ↓ civil-construction-specs    (KCS 시공 기준)
+  ↓ civil-design-standards      (KDS 설계 기준)
+  ↓ civil-safety-permits        (안전·허가)
+  ↓ civil-laws                  (법령 근거)
+output: 결정 사슬 검증 리포트 (누락된 결정 + 위반 조항 + 책임 자격자)
 ```
 
-## Bundled `extracted/`
+`civil-facility-diagnosis` is a separate chain for maintenance / safety inspection workflows on existing facilities.
 
-The repo root keeps an `extracted/` directory with pre-extracted node/edge jsonl for offline verification. Not part of any single sub-pack — provided as a verified seed graph aligned with the schema layer.
+## Ingest
+
+Set Path to one sub-pack folder per ingest run in OpenCRAB GitHub ingest UI. Each ingest produces an independent ontology pack in your workspace, ready to be wired into the Workflow agent.
 
 ## Schema highlights
 
 - 5 spaces: subject, concept, resource, **decision** (new), outcome
-- 26 node types with faceted classification axes
-- 10 new META_EDGES relations (`qualified_as`, `performs`, `based_on`, `depends_on`, `precedes`, `yields`, etc.)
-
-## Ingest
-
-In OpenCRAB GitHub ingest UI, set Path to one sub-pack folder per run. Each sub-pack creates its own ontology pack in your workspace, ready to be wired into a Workflow.
+- 26 node types with faceted classification axes (material/property/phase/scope/environment)
+- 10 new META_EDGES relations (`qualified_as`, `performs`, `based_on`, `depends_on`, `precedes`, `yields`, `targets_*`, `grants_authority_for`, `subclass_of`)
 
 ## Version
 

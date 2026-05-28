@@ -1,0 +1,69 @@
+# Extracted graph — 시공일지_양식.jsonl
+
+_source jsonl: 시공일지_양식.jsonl_
+
+## Nodes
+
+## Node — ConstructionLog / `ConstructionLog:form_construction_log_01`
+- space: `resource`
+- node_type: `ConstructionLog`
+- source_article: 시공일지 표준양식
+- properties:
+  - `issuer`: 국토교통부 / LH / 대한건설협회
+  - `source`: 국토교통부 건설사업관리 업무지침, LH, 대한건설협회 건설관련서식
+  - `legal_basis`: 건설기술 진흥법
+  - `language`: ko
+  - `frequency`: daily
+  - `sections`: ["날씨", "작업자현황", "장비", "금일작업", "검측현황", "시험현황", "안전관리", "품질관리", "환경관리", "민원특이사항"]
+  - `name`: 시공일지 (공사일지) 표준양식
+
+## Node — SiteEngineer / `SiteEngineer:form_construction_log_site_engineer`
+- space: `subject`
+- node_type: `SiteEngineer`
+- source_article: 시공일지 [11. 서명란] 현장대리인
+- properties:
+  - `role`: primary_author
+  - `ko`: 현장대리인
+  - `qualification`: 건설기술인 특급/고급
+  - `responsibility`: 시공일지 작성
+  - `name`: 현장대리인 (시공일지 작성자)
+
+## Node — SafetyManager / `SafetyManager:form_construction_log_safety_manager`
+- space: `subject`
+- node_type: `SafetyManager`
+- source_article: 시공일지 [11. 서명란] 안전관리자
+- properties:
+  - `role`: safety_section_signer
+  - `ko`: 안전관리자
+  - `qualification`: 산업안전기사 등
+  - `name`: 안전관리자 (시공일지 안전부분 확인)
+
+## Node — SiteEngineer / `SiteEngineer:form_construction_log_qm`
+- space: `subject`
+- node_type: `SiteEngineer`
+- source_article: 시공일지 [11. 서명란] 품질관리자
+- properties:
+  - `role`: quality_section_signer
+  - `ko`: 품질관리자
+  - `qualification`: 건설기술인 + 품질교육
+  - `name`: 품질관리자 (시공일지 품질부분 확인)
+
+## Node — Supervisor / `Supervisor:form_construction_log_supervisor`
+- space: `subject`
+- node_type: `Supervisor`
+- source_article: 시공일지 [11. 서명란] 감리원
+- properties:
+  - `role`: supervisor_confirm
+  - `ko`: 감리원
+  - `qualification`: 건설사업관리기술자
+  - `name`: 감리원 (시공일지 확인)
+
+## Node — ChiefSupervisor / `ChiefSupervisor:form_construction_log_chief_supervisor`
+- space: `subject`
+- node_type: `ChiefSupervisor`
+- source_article: 시공일지 [11. 서명란] 책임감리원
+- properties:
+  - `role`: chief_supervisor_periodic_confirm
+  - `ko`: 책임감리원
+  - `review_frequency`: weekly_or_monthly
+  - `name`: 책임감리원 (주간/월간 정기 확인)

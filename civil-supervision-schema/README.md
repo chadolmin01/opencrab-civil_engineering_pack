@@ -1,8 +1,14 @@
 # civil-supervision-schema
 
-Schema layer for the civil_engineering ontology pack family.
+**Lifecycle phase**: `SCHEMA`
 
-- `civil_engineering.yaml` — pack manifest (26 types, 5 spaces)
-- `types/*.yaml` — 26 type schemas with facet axes (material/property/phase/scope/environment)
+**Role in workflow chain**: schema layer · grammar · facets
 
-**Workflow role**: install as the first step of any OpenCRAB Workflow chain. Downstream packs (laws, design, construction, materials, safety, diagnosis) reuse these types and relations.
+## Contents
+
+- `sources/` — raw markdown (source-of-truth documents)
+- `extracted_nodes/` — grammar-validated node/edge records converted from the seed graph (jsonl→md)
+
+## Boundary rule
+
+Inclusion criterion: documents and extracted records that belong to the `SCHEMA` lifecycle phase of Korean civil-engineering qualified-actor decision-making. Cross-phase documents (e.g. statutes spanning design+construction) are routed to the pack representing their primary lifecycle anchor; downstream packs reference them via Workflow chain.

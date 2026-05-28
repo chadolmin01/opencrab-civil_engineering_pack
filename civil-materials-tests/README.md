@@ -1,13 +1,14 @@
 # civil-materials-tests
 
-KS material and test standards + material-receipt form.
+**Lifecycle phase**: `MATERIAL`
 
-Covers:
-- KS F 4009 레디믹스트 콘크리트
-- KS F 2402/2403/2405 콘크리트 슬럼프·공시체·압축강도 시험
-- KS F 2526 콘크리트 골재
-- KS D 3504 철근, KS D 3503 압연강재
-- KS B 0801/0802/0896 인장 시험편·방법, 강용접부 UT
-- 자재검수일보 양식
+**Role in workflow chain**: KS 자재·시험 표준 + 자재검수
 
-Quantitative criteria: SD400 fy=400 MPa, SS275 graded fy, UT acceptance classes, slump tolerance, etc.
+## Contents
+
+- `sources/` — raw markdown (source-of-truth documents)
+- `extracted_nodes/` — grammar-validated node/edge records converted from the seed graph (jsonl→md)
+
+## Boundary rule
+
+Inclusion criterion: documents and extracted records that belong to the `MATERIAL` lifecycle phase of Korean civil-engineering qualified-actor decision-making. Cross-phase documents (e.g. statutes spanning design+construction) are routed to the pack representing their primary lifecycle anchor; downstream packs reference them via Workflow chain.

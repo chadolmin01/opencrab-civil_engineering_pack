@@ -1,9 +1,14 @@
 # civil-facility-diagnosis
 
-시특법 시설물 안전·유지관리 + 정밀안전진단 + 안전점검 보고서.
+**Lifecycle phase**: `DIAGNOSIS`
 
-Covers:
-- 시설물의 안전 및 유지관리에 관한 특별법 (본문 + 시행령 + 시행규칙)
-- 안전점검 보고서 양식 (자체일일/주간/정기/정밀 4종)
+**Role in workflow chain**: 시특법 + 안전점검 보고서 + 정밀진단
 
-Quantitative criteria: safety grade A-E, periodicity per facility class, precision-diagnosis triggers, etc.
+## Contents
+
+- `sources/` — raw markdown (source-of-truth documents)
+- `extracted_nodes/` — grammar-validated node/edge records converted from the seed graph (jsonl→md)
+
+## Boundary rule
+
+Inclusion criterion: documents and extracted records that belong to the `DIAGNOSIS` lifecycle phase of Korean civil-engineering qualified-actor decision-making. Cross-phase documents (e.g. statutes spanning design+construction) are routed to the pack representing their primary lifecycle anchor; downstream packs reference them via Workflow chain.

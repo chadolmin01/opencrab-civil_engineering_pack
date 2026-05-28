@@ -1,10 +1,14 @@
 # civil-safety-permits
 
-산안법 + KOSHA 안전작업허가지침 + 작업허가서 양식.
+**Lifecycle phase**: `SAFETY`
 
-Covers:
-- 산업안전보건법 (건설 관련 조항)
-- KOSHA P-94 안전작업허가지침
-- 작업허가서 양식 (일반/화기/밀폐공간/고소/굴착/정전/방사선/중장비 8종)
+**Role in workflow chain**: KOSHA + 작업허가서 + 산안법 발췌
 
-Quantitative criteria: weld preheat temperatures, wind 10 m/s work-stop, gas measurement requirements, etc.
+## Contents
+
+- `sources/` — raw markdown (source-of-truth documents)
+- `extracted_nodes/` — grammar-validated node/edge records converted from the seed graph (jsonl→md)
+
+## Boundary rule
+
+Inclusion criterion: documents and extracted records that belong to the `SAFETY` lifecycle phase of Korean civil-engineering qualified-actor decision-making. Cross-phase documents (e.g. statutes spanning design+construction) are routed to the pack representing their primary lifecycle anchor; downstream packs reference them via Workflow chain.
