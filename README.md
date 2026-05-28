@@ -61,9 +61,9 @@ This is sample/seed data. Production usage: install the pack, then ingest your o
 ## Layout
 
 ```
-opencrab_ingest/             ← SaaS canonical ingest dir (chunked raw text)
-  chunks.jsonl                 132 sources / 1,108 text chunks
-  manifest.json                source-level metadata (sha256, bytes, chars)
+opencrab_ingest/             ← SaaS ingest entry (one file = one document)
+  sources/                     132 per-source markdown files
+  manifest.json                source-level metadata
   manifest.csv                 same, CSV form
 civil_engineering.yaml       — pack manifest (26 types, 5 spaces)
 types/                       — 26 type schemas with facet axes
