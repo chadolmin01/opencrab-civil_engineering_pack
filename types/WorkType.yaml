@@ -25,3 +25,34 @@ properties:
     required: false
     nullable: true
     description: 적용 표준 / applicable KDS or KCS standard code (e.g. "KCS 14 20 10").
+
+  # --- faceted classification axes (added) ---
+  topic_material:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Primary material/medium this entity applies to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [concrete, steel, rebar, aggregate, cement, soil, rock, asphalt, timber, composite, mixed, other]
+
+  topic_phase:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Lifecycle phase this entity belongs to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [planning, design, material_acceptance, construction, inspection, approval, commissioning, maintenance, diagnosis, demolition]
+
+  topic_environment:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Environmental condition assumption.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [normal, cold_weather, hot_weather, rainy, windy, snowy, seismic, underwater, underground, marine, other]

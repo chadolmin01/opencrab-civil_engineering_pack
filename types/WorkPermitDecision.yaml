@@ -87,3 +87,34 @@ properties:
       필수 서명자 목록 — Comma-separated qualified signer roles required for this permit.
       예: 화기작업 시 `fire_watcher,gas_measurer`; 밀폐공간 시 `external_watcher,gas_measurer`;
       굴착 시 `excavator_operator,buried_utility_manager`.
+
+  # --- faceted classification axes (added) ---
+  topic_phase:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Lifecycle phase this entity belongs to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [planning, design, material_acceptance, construction, inspection, approval, commissioning, maintenance, diagnosis, demolition]
+
+  topic_scope:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Scope of application: from material lot up to facility.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [material, specimen, joint, member, assembly, structure, facility, site, project]
+
+  topic_environment:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Environmental condition assumption.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [normal, cold_weather, hot_weather, rainy, windy, snowy, seismic, underwater, underground, marine, other]

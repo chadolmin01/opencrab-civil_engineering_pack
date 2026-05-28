@@ -78,3 +78,34 @@ properties:
     description: |
       작업중지권 여부 — Whether the decider holds work-suspension authority.
       책임감리원·발주처에 한정 (시특법·건진법 근거).
+
+  # --- faceted classification axes (added) ---
+  topic_phase:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Lifecycle phase this entity belongs to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [planning, design, material_acceptance, construction, inspection, approval, commissioning, maintenance, diagnosis, demolition]
+
+  topic_scope:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Scope of application: from material lot up to facility.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [material, specimen, joint, member, assembly, structure, facility, site, project]
+
+  topic_environment:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Environmental condition assumption.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [normal, cold_weather, hot_weather, rainy, windy, snowy, seismic, underwater, underground, marine, other]

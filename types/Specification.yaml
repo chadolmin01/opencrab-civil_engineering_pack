@@ -44,3 +44,54 @@ properties:
     nullable: true
     description: Engineering discipline of the specification.
     enum: [civil, structural, architectural, mep, geotechnical, other]
+
+  # --- faceted classification axes (added) ---
+  topic_material:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Primary material/medium this entity applies to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [concrete, steel, rebar, aggregate, cement, soil, rock, asphalt, timber, composite, mixed, other]
+
+  topic_property:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Primary property/dimension addressed (for cross-domain matching).
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [strength, slump, fatigue, durability, stability, safety, dimension, tolerance, deformation, deflection, settlement, vibration, thermal, corrosion, fire, other]
+
+  topic_phase:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Lifecycle phase this entity belongs to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [planning, design, material_acceptance, construction, inspection, approval, commissioning, maintenance, diagnosis, demolition]
+
+  topic_scope:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Scope of application: from material lot up to facility.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [material, specimen, joint, member, assembly, structure, facility, site, project]
+
+  topic_environment:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Environmental condition assumption.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [normal, cold_weather, hot_weather, rainy, windy, snowy, seismic, underwater, underground, marine, other]

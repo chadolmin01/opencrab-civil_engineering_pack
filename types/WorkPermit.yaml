@@ -67,3 +67,34 @@ properties:
     description: |
       가스 측정 필수 여부 — Whether gas measurement (LEL/O2/CO/H2S) is mandatory.
       화기·밀폐공간 작업 시 작업 직전 30분 이내 측정 의무.
+
+  # --- faceted classification axes (added) ---
+  topic_phase:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Lifecycle phase this entity belongs to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [planning, design, material_acceptance, construction, inspection, approval, commissioning, maintenance, diagnosis, demolition]
+
+  topic_scope:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Scope of application: from material lot up to facility.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [material, specimen, joint, member, assembly, structure, facility, site, project]
+
+  topic_environment:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Environmental condition assumption.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [normal, cold_weather, hot_weather, rainy, windy, snowy, seismic, underwater, underground, marine, other]

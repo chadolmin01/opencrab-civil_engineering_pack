@@ -25,3 +25,24 @@ properties:
     required: false
     nullable: true
     description: 소속 시설물 node 참조 / reference to the parent Facility node this component belongs to.
+
+  # --- faceted classification axes (added) ---
+  topic_material:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Primary material/medium this entity applies to.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [concrete, steel, rebar, aggregate, cement, soil, rock, asphalt, timber, composite, mixed, other]
+
+  topic_scope:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Scope of application: from material lot up to facility.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [material, specimen, joint, member, assembly, structure, facility, site, project]

@@ -31,3 +31,14 @@ properties:
     required: false
     nullable: true
     description: 준공 연도 / year the facility was commissioned.
+
+  # --- faceted classification axes (added) ---
+  topic_scope:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Scope of application: from material lot up to facility.
+      Orthogonal facet — used for cross-domain node matching by the
+      OpenCRAB LLM extractor.
+    enum: [material, specimen, joint, member, assembly, structure, facility, site, project]
