@@ -1,30 +1,46 @@
-# civil_engineering — OpenCRAB ontology pack (multi-version)
+# civil_engineering — OpenCRAB ontology pack (7 use-case sub-packs)
 
-Korean civil-engineering qualified-actor decision ontology — split into ingest-sized sub-versions to fit OpenCRAB SaaS document limits per ingest run.
+Korean civil-engineering qualified-actor decision ontology, split into seven semantic sub-packs designed to chain together inside an OpenCRAB Workflow.
 
-## How to ingest
+## Sub-packs (each independently ingestable)
 
-In OpenCRAB GitHub ingest UI:
-- URL: `https://github.com/chadolmin01/opencrab-civil_engineering_pack`
-- Branch: `main`
-- Path: choose one of `v1.0`, `v1.1`, `v1.2`, `v1.3`, `v1.4` per ingest run
+| Path | Role |
+|---|---|
+| [`civil-supervision-schema/`](./civil-supervision-schema) | Schema layer (26 types, 10 relations, 5 facet axes). Use first in any chain. |
+| [`civil-laws/`](./civil-laws) | Korean primary laws (건진법) |
+| [`civil-design-standards/`](./civil-design-standards) | KDS design standards (concrete/steel/geotech/seismic) |
+| [`civil-construction-process/`](./civil-construction-process) | KCS construction specs + supervision directives + inspection forms |
+| [`civil-materials-tests/`](./civil-materials-tests) | KS material + test standards + 자재검수일보 |
+| [`civil-safety-permits/`](./civil-safety-permits) | 산안법 + KOSHA P-94 + 작업허가서 |
+| [`civil-facility-diagnosis/`](./civil-facility-diagnosis) | 시특법 + 안전점검 보고서 |
 
-Ingest in order: **v1.0 → v1.1 → v1.2 → v1.3 → v1.4**. Each ingest adds to the same workspace.
+## Workflow chain example — 시공 의사결정 검증
 
-## Versions
+```
+input: 시공일지 한 단락
+  ↓ civil-supervision-schema  → 자격자·결정 type 분류
+  ↓ civil-construction-process → 시공 단계 매칭
+  ↓ civil-materials-tests      → 자재 검수 요건 확인
+  ↓ civil-design-standards     → 설계 기준 매칭
+  ↓ civil-safety-permits       → 안전·허가 위반 detect
+  ↓ civil-laws                 → 법령 조항 인용
+output: 검증 리포트 (누락된 결정 + 위반 조항 + 권장 조치 + 자격자 책임)
+```
 
-| Version | Contents | Files |
-|---|---|---|
-| `v1.0/` | Schema only (26 types + manifest) | ~28 |
-| `v1.1/` | Laws + directives + forms (Korean primary sources) | ~23 |
-| `v1.2/` | KDS design standards (markdown corpus) | ~75 |
-| `v1.3/` | KCS construction specs + KS material/test standards | ~30 |
-| `v1.4/` | Pre-extracted seed graph (jsonl) | ~44 |
+## Bundled `extracted/`
 
-## Schema
+The repo root keeps an `extracted/` directory with pre-extracted node/edge jsonl for offline verification. Not part of any single sub-pack — provided as a verified seed graph aligned with the schema layer.
+
+## Schema highlights
 
 - 5 spaces: subject, concept, resource, **decision** (new), outcome
-- 26 node types with faceted classification axes (material/property/phase/scope/environment)
-- 10 new META_EDGES relations (qualified_as, performs, based_on, depends_on, precedes, yields, etc.)
+- 26 node types with faceted classification axes
+- 10 new META_EDGES relations (`qualified_as`, `performs`, `based_on`, `depends_on`, `precedes`, `yields`, etc.)
 
-## Version 1.0.0
+## Ingest
+
+In OpenCRAB GitHub ingest UI, set Path to one sub-pack folder per run. Each sub-pack creates its own ontology pack in your workspace, ready to be wired into a Workflow.
+
+## Version
+
+`1.0.0`
