@@ -1,0 +1,80 @@
+type: SafetyInspectionDecision
+version: "1.0"
+space: decision
+description: 시설물 안전점검 결정 — Qualified-actor decision recording periodic safety inspection grade and repair requirement for a facility. 근거: 시특법 §11, 시설물의 안전 및 유지관리에 관한 특별법 시행령.
+properties:
+  decision_id:
+    type: string
+    required: true
+    nullable: false
+    description: Unique identifier of the decision record.
+  decision_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of the decision (ISO 8601 or yyyy-mm-dd).
+  decided_by_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the qualified actor (subject space) who made the decision.
+  legal_basis:
+    type: string
+    required: false
+    nullable: true
+    description: Legal/regulatory basis (e.g., `시특법 §11 ①`).
+  decision_status:
+    type: string
+    required: true
+    nullable: false
+    description: Lifecycle stage of the decision.
+    enum: [in_progress, completed, under_review, revoked]
+    default: completed
+  evidence_refs:
+    type: string
+    required: false
+    nullable: true
+    description: Comma-separated node IDs of supporting evidence (resource space).
+  notes:
+    type: string
+    required: false
+    nullable: true
+    description: Additional remarks.
+  target_facility_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the facility (concept space) under inspection.
+  inspection_period:
+    type: string
+    required: false
+    nullable: true
+    description: Periodicity of the safety inspection.
+    enum: [regular, annual, semi_annual, quarterly, emergency]
+  inspection_grade_result:
+    type: string
+    required: false
+    nullable: true
+    description: Resulting safety grade of the facility (시특법 안전등급).
+    enum: [A, B, C, D, E]
+  repair_required:
+    type: boolean
+    required: false
+    nullable: true
+    description: Whether repair or follow-up action is required.
+  inspector_role:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      점검자 자격 — Qualification role of the inspector who performed the safety inspection.
+      safety_manager(안전관리자, 자체점검) / cm_engineer(건설사업관리기술자, 정기점검) /
+      safety_inspection_firm(안전진단전문기관, 정밀점검).
+    enum: [safety_manager, cm_engineer, safety_inspection_firm]
+  work_suspension_authority:
+    type: boolean
+    required: false
+    nullable: true
+    description: |
+      작업중지권 여부 — Whether the decider holds work-suspension authority.
+      책임감리원·발주처에 한정 (시특법·건진법 근거).

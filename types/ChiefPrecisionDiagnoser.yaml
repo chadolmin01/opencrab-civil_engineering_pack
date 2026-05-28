@@ -1,0 +1,34 @@
+type: ChiefPrecisionDiagnoser
+version: "1.0"
+space: subject
+description: 정밀안전진단 책임기술자 (Chief precision safety diagnoser responsible for in-depth structural diagnosis under 시설물의 안전 및 유지관리에 관한 특별법 / 시특법).
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Full name of the chief precision diagnoser (정밀안전진단 책임기술자 본인 이름).
+  qualification_level:
+    type: string
+    required: true
+    nullable: false
+    description: Grade under 시특법 — restricted to master (특급) for chief precision diagnoser role.
+    enum: [master]
+    default: master
+  affiliated_organization:
+    type: string
+    required: true
+    nullable: false
+    description: Affiliated precision safety diagnosis firm registered under 시특법 (소속 정밀안전진단 전문기관).
+  target_facility_type:
+    type: string
+    required: true
+    nullable: false
+    description: Type of facility subject to precision safety diagnosis (대상 시설물 종류).
+    enum: [bridge, tunnel, dam, retaining_wall, building, road, railway, other]
+  diagnostic_specialty:
+    type: string
+    required: true
+    nullable: false
+    description: Diagnostic engineering specialty (진단 전문분야).
+    enum: [concrete, steel, geotechnical, composite, other]

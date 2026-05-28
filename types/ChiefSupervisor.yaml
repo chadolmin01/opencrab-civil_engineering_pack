@@ -1,0 +1,37 @@
+type: ChiefSupervisor
+version: "1.0"
+space: subject
+description: 책임감리 / 책임건설사업관리기술인 (Chief construction manager bearing statutory responsibility under 건진법).
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Full name of the chief supervisor (책임감리 본인 이름).
+  qualification_level:
+    type: string
+    required: true
+    nullable: false
+    description: Construction engineer grade — restricted to master (특급) for chief supervisor role under 건진법.
+    enum: [master]
+    default: master
+  affiliated_organization:
+    type: string
+    required: true
+    nullable: false
+    description: Affiliated construction management firm (소속 건설사업관리 용역사).
+  responsible_sites:
+    type: list
+    required: true
+    nullable: false
+    description: List of construction sites under this chief supervisor's responsibility (담당 현장 목록).
+  appointment_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of appointment as chief supervisor in ISO 8601 format (지명일).
+  legal_responsibility_scope:
+    type: string
+    required: false
+    nullable: true
+    description: Short description of statutory responsibility scope under 건진법 (법적 책임 범위).

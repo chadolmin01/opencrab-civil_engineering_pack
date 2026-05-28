@@ -1,0 +1,66 @@
+type: Checklist
+version: "1.0"
+space: resource
+description: 검측 체크리스트 — Inspection checklist used to verify conformance for a specific work item.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Identifier name of the checklist.
+  document_id:
+    type: string
+    required: false
+    nullable: true
+    description: Unique document identifier.
+  issue_date:
+    type: string
+    required: false
+    nullable: true
+    description: Date of issue (ISO 8601 or yyyy-mm-dd).
+  issuer_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Reference to the issuer/signer node ID in the subject space.
+  source_doc_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Path or URL of the original source document.
+  checklist_type:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      검측 체크리스트 공종 — Type of inspection checklist by 공종.
+      concrete(콘크리트) / rebar(철근) / formwork(거푸집) / pile_driving(항타) /
+      earthwork(토공) / drainage(배수공) / safety(안전) / bridge_erection(교량가설).
+    enum: [concrete, rebar, formwork, pile_driving, earthwork, drainage, safety, bridge_erection, other]
+  item_count:
+    type: int
+    required: false
+    nullable: true
+    description: Number of inspection items contained in the checklist.
+  inspection_columns:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      검측 4컬럼 표준 — Standard four-column structure of the inspection checklist.
+      Default: `item,standard,result,corrective_action` — 검사항목/검사기준(시방)/검사결과/조치사항.
+    default: "item,standard,result,corrective_action"
+  code_number:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      Code No — 검측 식별 번호 (체크리스트 머리행에 기재). LH/도공 표준 양식에서 사용.
+  inspection_phase:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      검측 단계 — Construction inspection phase relative to the work.
+      pre_construction(타설 전·시공 전) / during_construction(시공 중) / post_construction(시공 후·양생 후).
+    enum: [pre_construction, during_construction, post_construction]

@@ -1,0 +1,33 @@
+type: Facility
+version: "1.0"
+space: concept
+description: 시설물 — A civil infrastructure facility (교량·터널·댐·옹벽·건축물·도로·철도·항만·공항·정수장 등). 근거: 시설물의 안전 및 유지관리에 관한 특별법 (시특법) 제1·2종 시설물 분류.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: 시설물 명칭 / facility name (e.g. "한강대교", "남산1호터널").
+  category:
+    type: string
+    required: true
+    nullable: false
+    description: 시설물 분류 / facility category.
+    enum: [bridge, tunnel, dam, retaining_wall, building, road, railway, harbor, airport, water_treatment, other]
+  safety_grade:
+    type: string
+    required: false
+    nullable: true
+    description: 시설물 안전등급 / facility safety grade per 시특법 (A:최우수 ~ E:불량).
+    enum: [A, B, C, D, E]
+    default: null
+  length_m:
+    type: float
+    required: false
+    nullable: true
+    description: 시설물 연장 / facility length in meters (where applicable, e.g. bridge, tunnel, road).
+  commissioning_year:
+    type: integer
+    required: false
+    nullable: true
+    description: 준공 연도 / year the facility was commissioned.

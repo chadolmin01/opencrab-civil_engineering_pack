@@ -1,0 +1,62 @@
+type: StageApprovalDecision
+version: "1.0"
+space: decision
+description: 단계별 시공 승인 — Qualified-actor decision approving completion of a construction stage and authorizing progress to the next stage. 근거: 건진법 §55, 건설사업관리 업무지침.
+properties:
+  decision_id:
+    type: string
+    required: true
+    nullable: false
+    description: Unique identifier of the decision record.
+  decision_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of the decision (ISO 8601 or yyyy-mm-dd).
+  decided_by_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the qualified actor (subject space) who made the decision.
+  legal_basis:
+    type: string
+    required: false
+    nullable: true
+    description: Legal/regulatory basis (e.g., `건진법 §55 ②`).
+  decision_status:
+    type: string
+    required: true
+    nullable: false
+    description: Lifecycle stage of the decision.
+    enum: [in_progress, completed, under_review, revoked]
+    default: completed
+  evidence_refs:
+    type: string
+    required: false
+    nullable: true
+    description: Comma-separated node IDs of supporting evidence (resource space).
+  notes:
+    type: string
+    required: false
+    nullable: true
+    description: Additional remarks.
+  stage_name:
+    type: string
+    required: true
+    nullable: false
+    description: Name of the construction stage (e.g., `기초 완료`, `골조 완료`).
+  completion_percentage:
+    type: float
+    required: false
+    nullable: true
+    description: Reported completion percentage of the stage (0.0 to 100.0).
+  approved:
+    type: boolean
+    required: true
+    nullable: false
+    description: Whether the stage completion is approved.
+  next_stage_authorized:
+    type: boolean
+    required: false
+    nullable: true
+    description: Whether progress to the next construction stage is authorized.

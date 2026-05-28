@@ -1,0 +1,89 @@
+type: WorkPermitDecision
+version: "1.0"
+space: decision
+description: "위험공종 작업허가 결정 — Qualified-actor decision granting or denying a permit for high-risk work activities, with hazard classification and validity period. 근거: 산안법 §38, 산업안전보건기준에 관한 규칙."
+properties:
+  decision_id:
+    type: string
+    required: true
+    nullable: false
+    description: Unique identifier of the decision record.
+  decision_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of the decision (ISO 8601 or yyyy-mm-dd).
+  decided_by_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the qualified actor (subject space) who made the decision.
+  legal_basis:
+    type: string
+    required: false
+    nullable: true
+    description: Legal/regulatory basis (e.g., `산안법 §38`).
+  decision_status:
+    type: string
+    required: true
+    nullable: false
+    description: Lifecycle stage of the decision.
+    enum: [in_progress, completed, under_review, revoked]
+    default: completed
+  evidence_refs:
+    type: string
+    required: false
+    nullable: true
+    description: Comma-separated node IDs of supporting evidence (resource space).
+  notes:
+    type: string
+    required: false
+    nullable: true
+    description: Additional remarks.
+  work_type_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the work type (concept space) for which the permit is issued.
+  hazard_class:
+    type: string
+    required: true
+    nullable: false
+    description: Hazard classification of the work.
+    enum: [low, medium, high, critical]
+  work_period_start:
+    type: string
+    required: false
+    nullable: true
+    description: Start of the permitted work period (ISO 8601 or yyyy-mm-dd).
+  work_period_end:
+    type: string
+    required: false
+    nullable: true
+    description: End of the permitted work period (ISO 8601 or yyyy-mm-dd).
+  permitted:
+    type: boolean
+    required: true
+    nullable: false
+    description: Whether the work is permitted (true) or denied (false).
+  safety_conditions:
+    type: string
+    required: false
+    nullable: true
+    description: Safety conditions or controls required for the permit to be valid.
+  permit_category:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      허가서 분류 — KOSHA 일반작업허가서(general) vs 특별작업허가서(special) 구분.
+      특별: 화기·밀폐공간·고소·굴착·정전·방사선·중장비.
+    enum: [general, special]
+  required_signers:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      필수 서명자 목록 — Comma-separated qualified signer roles required for this permit.
+      예: 화기작업 시 `fire_watcher,gas_measurer`; 밀폐공간 시 `external_watcher,gas_measurer`;
+      굴착 시 `excavator_operator,buried_utility_manager`.

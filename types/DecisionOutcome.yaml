@@ -1,0 +1,32 @@
+type: DecisionOutcome
+version: "1.0"
+space: outcome
+description: 결정 결과 — The recorded result of a qualified-actor decision in the decision space (검수·검측·작업허가·단계승인·안전점검·정밀안전진단 등). Linked from a Decision node via the `yields` relation.
+properties:
+  decision_ref:
+    type: string
+    required: true
+    nullable: false
+    description: 결정행위 노드 참조 / reference to the Decision node whose result this outcome represents.
+  status:
+    type: string
+    required: true
+    nullable: false
+    description: 결정 결과 상태 / outcome status of the decision.
+    enum: [pass, conditional_pass, fail, approved, rejected]
+    default: pass
+  conditions:
+    type: string
+    required: false
+    nullable: true
+    description: 조건부 통과 시 조건 내용 / conditions attached when status is `conditional_pass`.
+  decided_at:
+    type: string
+    required: false
+    nullable: true
+    description: 결정 시각 (ISO 8601 타임스탬프) / timestamp when the decision was made.
+  decided_by_ref:
+    type: string
+    required: false
+    nullable: true
+    description: 결정 주체 노드 참조 / reference to the qualified-actor (subject) node that made the decision.

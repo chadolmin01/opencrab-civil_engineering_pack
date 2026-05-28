@@ -1,0 +1,31 @@
+type: SafetyManager
+version: "1.0"
+space: subject
+description: 안전관리자 (Occupational safety manager designated under 산업안전보건법 / 산안법).
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Full name of the safety manager (안전관리자 본인 이름).
+  qualification_level:
+    type: string
+    required: true
+    nullable: false
+    description: Construction engineer grade for safety management (건설기술인 등급).
+    enum: [trainee, intermediate, senior, master]
+  affiliated_organization:
+    type: string
+    required: true
+    nullable: false
+    description: Affiliated employer organization (소속 사업장 또는 시공사).
+  safety_management_scope:
+    type: string
+    required: true
+    nullable: false
+    description: Scope of safety management duties (관리 범위 — e.g., site-wide, specific facility, specific work types).
+  appointment_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of appointment as safety manager in ISO 8601 format (선임일).

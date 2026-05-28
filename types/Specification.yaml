@@ -1,0 +1,46 @@
+type: Specification
+version: "1.0"
+space: resource
+description: 시방서 — Technical specification document defining requirements for construction works.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Identifier name of the specification.
+  document_id:
+    type: string
+    required: false
+    nullable: true
+    description: Unique document identifier.
+  issue_date:
+    type: string
+    required: false
+    nullable: true
+    description: Date of issue (ISO 8601 or yyyy-mm-dd).
+  issuer_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Reference to the issuer/signer node ID in the subject space.
+  source_doc_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Path or URL of the original source document.
+  section:
+    type: string
+    required: false
+    nullable: true
+    description: Specification section number.
+  applicable_standard_refs:
+    type: string
+    required: false
+    nullable: true
+    description: Applicable KDS/KCS standard codes referenced by this specification.
+  discipline:
+    type: string
+    required: false
+    nullable: true
+    description: Engineering discipline of the specification.
+    enum: [civil, structural, architectural, mep, geotechnical, other]

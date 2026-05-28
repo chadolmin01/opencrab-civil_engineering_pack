@@ -1,0 +1,27 @@
+type: WorkType
+version: "1.0"
+space: concept
+description: 공종 — A construction work category (콘크리트·철근·거푸집·항타·토공·교량가설·터널·포장·배수·방수·안전시설 등). 근거: KCS 표준시방서 체계, 산업안전보건법 위험공종 분류.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: 공종 한국어 명칭 (e.g. "콘크리트 타설", "항타").
+  category:
+    type: string
+    required: true
+    nullable: false
+    description: 공종 분류 / work-type category.
+    enum: [earthwork, concrete, rebar, formwork, pile_driving, bridge_erection, tunneling, paving, drainage, waterproofing, safety_facility, other]
+  risk_level:
+    type: string
+    required: true
+    nullable: false
+    description: 위험도 등급 / inherent risk level of the work type (per 산안법 위험성평가).
+    enum: [low, medium, high, critical]
+  applicable_standard:
+    type: string
+    required: false
+    nullable: true
+    description: 적용 표준 / applicable KDS or KCS standard code (e.g. "KCS 14 20 10").

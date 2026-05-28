@@ -1,0 +1,31 @@
+type: Supervisor
+version: "1.0"
+space: subject
+description: 감리원 (Construction supervisor performing construction management duties under 건진법 and 건설사업관리 업무지침).
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Full name of the supervisor (감리원 본인 이름).
+  qualification_level:
+    type: string
+    required: true
+    nullable: false
+    description: Construction engineer grade under 건진법 (건설기술인 등급).
+    enum: [trainee, intermediate, senior, master]
+  affiliated_organization:
+    type: string
+    required: true
+    nullable: false
+    description: Affiliated construction management firm or supervising organization (소속 건설사업관리 용역사).
+  assigned_site:
+    type: string
+    required: false
+    nullable: true
+    description: Name or identifier of the construction site currently assigned to (배치 현장).
+  license_number:
+    type: string
+    required: false
+    nullable: true
+    description: Construction engineer license/registration number (건설기술인 자격번호).

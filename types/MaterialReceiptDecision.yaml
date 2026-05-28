@@ -1,0 +1,80 @@
+type: MaterialReceiptDecision
+version: "1.0"
+space: decision
+description: "자재 반입 검수 결정 — Qualified-actor decision on accepting, rejecting, or conditionally accepting incoming construction materials at the site. 근거: 건진법 §39, 건설공사 품질관리 업무지침."
+properties:
+  decision_id:
+    type: string
+    required: true
+    nullable: false
+    description: Unique identifier of the decision record.
+  decision_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of the decision (ISO 8601 or yyyy-mm-dd).
+  decided_by_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the qualified actor (subject space) who made the decision.
+  legal_basis:
+    type: string
+    required: false
+    nullable: true
+    description: Legal/regulatory basis (e.g., `건진법 §39-2 ②`).
+  decision_status:
+    type: string
+    required: true
+    nullable: false
+    description: Lifecycle stage of the decision.
+    enum: [in_progress, completed, under_review, revoked]
+    default: completed
+  evidence_refs:
+    type: string
+    required: false
+    nullable: true
+    description: Comma-separated node IDs of supporting evidence (resource space).
+  notes:
+    type: string
+    required: false
+    nullable: true
+    description: Additional remarks.
+  material_id:
+    type: string
+    required: true
+    nullable: false
+    description: Identifier of the material lot being inspected.
+  quantity:
+    type: float
+    required: false
+    nullable: true
+    description: Quantity of material received.
+  quantity_unit:
+    type: string
+    required: false
+    nullable: true
+    description: Unit of measure for the quantity (e.g., m3, ton, ea).
+  inspection_method:
+    type: string
+    required: true
+    nullable: false
+    description: |
+      검수 방법 — Method used to inspect the material. Branching guidance by material_type:
+      visual(외관) — 전 자재 공통; dimensional(치수) — 철근·파일; documentary(서류) — Mill Sheet·시험성적서;
+      lab_test(시험) — 레미콘 슬럼프·강도, 골재 입도시험 등.
+    enum: [visual, dimensional, documentary, lab_test, other]
+  material_type:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      자재 종류 — Type of the inspected material (LH 5대 주요 자재 + other).
+      ready_mixed_concrete(레미콘) / rebar(철근) / cement(시멘트) / aggregate(골재) / pile(파일).
+    enum: [ready_mixed_concrete, rebar, cement, aggregate, pile, other]
+  result:
+    type: string
+    required: true
+    nullable: false
+    description: Decision outcome for the material receipt.
+    enum: [accepted, rejected, conditional]

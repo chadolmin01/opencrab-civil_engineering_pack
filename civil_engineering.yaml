@@ -1,0 +1,43 @@
+name: civil_engineering
+version: "0.1.0"
+description: >
+  Schema pack for Korean civil engineering qualified-actor decision ontology.
+  Covers supervision, safety, construction inspection, work permits, stage
+  approval, safety inspection, and precision diagnosis decisions across
+  bridges, tunnels, dams, retaining walls, roads, railways, and other
+  facilities. Based on Construction Technology Promotion Act (건진법),
+  Facility Safety Act (시특법), Occupational Safety and Health Act (산안법),
+  and related ministerial directives.
+types:
+  - Supervisor
+  - ChiefSupervisor
+  - SiteEngineer
+  - SafetyManager
+  - ChiefSafetyInspector
+  - ChiefPrecisionDiagnoser
+  - Qualification
+  - StructuralComponent
+  - WorkType
+  - Facility
+  - Drawing
+  - Specification
+  - Checklist
+  - TestReport
+  - WorkPermit
+  - ConstructionLog
+  - SupervisionLog
+  - MaterialReceiptReport
+  - SafetyInspectionReport
+  - MaterialReceiptDecision
+  - ConstructionInspectionDecision
+  - WorkPermitDecision
+  - StageApprovalDecision
+  - SafetyInspectionDecision
+  - PrecisionDiagnosisDecision
+  - DecisionOutcome
+spaces:
+  - subject
+  - concept
+  - resource
+  - decision
+  - outcome

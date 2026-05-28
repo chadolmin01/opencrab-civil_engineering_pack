@@ -1,0 +1,69 @@
+type: PrecisionDiagnosisDecision
+version: "1.0"
+space: decision
+description: 정밀안전진단 결정 — Qualified-actor decision recording precision safety diagnosis grade, structural safety index, and usage restriction for a facility. 근거: 시특법 §12, 시설물의 안전 및 유지관리에 관한 특별법 시행령.
+properties:
+  decision_id:
+    type: string
+    required: true
+    nullable: false
+    description: Unique identifier of the decision record.
+  decision_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of the decision (ISO 8601 or yyyy-mm-dd).
+  decided_by_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the qualified actor (subject space) who made the decision.
+  legal_basis:
+    type: string
+    required: false
+    nullable: true
+    description: Legal/regulatory basis (e.g., `시특법 §12 ②`).
+  decision_status:
+    type: string
+    required: true
+    nullable: false
+    description: Lifecycle stage of the decision.
+    enum: [in_progress, completed, under_review, revoked]
+    default: completed
+  evidence_refs:
+    type: string
+    required: false
+    nullable: true
+    description: Comma-separated node IDs of supporting evidence (resource space).
+  notes:
+    type: string
+    required: false
+    nullable: true
+    description: Additional remarks.
+  target_facility_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the facility (concept space) under precision diagnosis.
+  diagnosis_grade_result:
+    type: string
+    required: false
+    nullable: true
+    description: Resulting precision diagnosis grade (시특법 안전등급).
+    enum: [A, B, C, D, E]
+  structural_safety_index:
+    type: float
+    required: false
+    nullable: true
+    description: Computed structural safety index (optional).
+  usage_restriction:
+    type: string
+    required: false
+    nullable: true
+    description: Usage restriction imposed as a result of the diagnosis.
+    enum: [none, partial_restriction, full_restriction, demolition_recommended]
+  next_diagnosis_due:
+    type: string
+    required: false
+    nullable: true
+    description: Date when the next precision diagnosis is due (ISO 8601 or yyyy-mm-dd).

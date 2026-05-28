@@ -1,0 +1,79 @@
+type: ConstructionInspectionDecision
+version: "1.0"
+space: decision
+description: "공종별 시공 검측 결정 — Qualified-actor decision on whether a specific work type or structural component passes construction inspection. 근거: 건진법 §55, 건설공사 감리업무 수행지침."
+properties:
+  decision_id:
+    type: string
+    required: true
+    nullable: false
+    description: Unique identifier of the decision record.
+  decision_date:
+    type: string
+    required: true
+    nullable: false
+    description: Date of the decision (ISO 8601 or yyyy-mm-dd).
+  decided_by_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the qualified actor (subject space) who made the decision.
+  legal_basis:
+    type: string
+    required: false
+    nullable: true
+    description: Legal/regulatory basis (e.g., `건진법 §55 ①`).
+  decision_status:
+    type: string
+    required: true
+    nullable: false
+    description: Lifecycle stage of the decision.
+    enum: [in_progress, completed, under_review, revoked]
+    default: completed
+  evidence_refs:
+    type: string
+    required: false
+    nullable: true
+    description: Comma-separated node IDs of supporting evidence (resource space).
+  notes:
+    type: string
+    required: false
+    nullable: true
+    description: Additional remarks.
+  work_type_ref:
+    type: string
+    required: true
+    nullable: false
+    description: Node ID of the work type (concept space) being inspected.
+  component_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Node ID of the structural component (concept space), optional.
+  location:
+    type: string
+    required: false
+    nullable: true
+    description: On-site location description (e.g., grid B-3, pier P2).
+  inspection_method:
+    type: string
+    required: false
+    nullable: true
+    description: Description of the inspection method or procedure applied.
+  result:
+    type: string
+    required: true
+    nullable: false
+    description: |
+      검측 결과 — Inspection result. pass(적합) / fail(부적합) / conditional_pass(조건부 적합) /
+      corrective_required(시정지시 필요).
+    enum: [pass, fail, conditional_pass, corrective_required]
+  inspection_workflow:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      검측 절차 단계 — 4-step inspection workflow stage.
+      self_check(시공자 자체점검) → inspection_request(검측요청서 제출) →
+      supervisor_inspection(감리 검측) → corrective_directive(시정지시).
+    enum: [self_check, inspection_request, supervisor_inspection, corrective_directive]

@@ -1,0 +1,27 @@
+type: StructuralComponent
+version: "1.0"
+space: concept
+description: 부재 — A structural component of a civil/architectural facility (기둥·보·슬래브·기초·벽체·거더·교각·교대·말뚝 등). 근거: KDS 14 (구조설계기준), 시설물의 안전 및 유지관리에 관한 특별법.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: 부재 한국어 명칭 (e.g. "RC 기둥", "PSC 거더").
+  category:
+    type: string
+    required: true
+    nullable: false
+    description: 부재 유형 분류 / structural-component category.
+    enum: [column, beam, slab, foundation, wall, girder, pier, abutment, pile, other]
+  material:
+    type: string
+    required: false
+    nullable: true
+    description: 주재료 / primary structural material.
+    enum: [reinforced_concrete, prestressed_concrete, steel, composite, masonry, timber, other]
+  parent_facility_ref:
+    type: string
+    required: false
+    nullable: true
+    description: 소속 시설물 node 참조 / reference to the parent Facility node this component belongs to.

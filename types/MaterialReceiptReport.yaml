@@ -1,0 +1,78 @@
+type: MaterialReceiptReport
+version: "1.0"
+space: resource
+description: 자재검수일보 — Daily material receipt and inspection report for materials delivered to the site.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Identifier name of the material receipt report.
+  document_id:
+    type: string
+    required: false
+    nullable: true
+    description: Unique document identifier.
+  issue_date:
+    type: string
+    required: false
+    nullable: true
+    description: Date of issue (ISO 8601 or yyyy-mm-dd).
+  issuer_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Reference to the issuer/signer node ID in the subject space.
+  source_doc_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Path or URL of the original source document.
+  material_type:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      자재 종류 — Type of received material. LH 품질관리지침 5대 주요 자재 + other.
+      ready_mixed_concrete(레미콘) / rebar(철근) / cement(시멘트) / aggregate(골재) /
+      pile(항타용 파일 — PHC·강관).
+    enum: [ready_mixed_concrete, rebar, cement, aggregate, pile, other]
+  supplier:
+    type: string
+    required: false
+    nullable: true
+    description: Name of the supplier or vendor.
+  quantity:
+    type: float
+    required: false
+    nullable: true
+    description: Received quantity in the specified unit.
+  quantity_unit:
+    type: string
+    required: false
+    nullable: true
+    description: Unit of measurement for the quantity (e.g., ton, m3, ea).
+  inspection_result:
+    type: string
+    required: false
+    nullable: true
+    description: Result of the material receipt inspection.
+    enum: [accepted, rejected, conditional]
+  test_required:
+    type: boolean
+    required: false
+    nullable: true
+    description: |
+      자재별 시험 의무 여부 — Whether a KS/KCS test (e.g., Mill Sheet, lab test) is mandatory.
+      레미콘·철근·시멘트·골재·파일은 KCS 기준 시험 의무.
+  test_method:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      시험 방법 — Test method depending on material_type.
+      레미콘: slump, compressive_strength, air_content, chloride.
+      철근: tensile, bending, mill_sheet.
+      시멘트: fineness, mill_sheet.
+      골재: sieve_analysis, absorption, unit_weight.
+      파일: compressive_strength, mill_sheet.

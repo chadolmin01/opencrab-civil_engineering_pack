@@ -1,0 +1,33 @@
+type: ChiefSafetyInspector
+version: "1.0"
+space: subject
+description: 안전점검 책임기술자 (Chief safety inspector responsible for facility safety inspections under 시설물의 안전 및 유지관리에 관한 특별법 / 시특법).
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Full name of the chief safety inspector (안전점검 책임기술자 본인 이름).
+  qualification_level:
+    type: string
+    required: true
+    nullable: false
+    description: Grade under 시특법 — typically senior or master for chief inspector role.
+    enum: [senior, master]
+    default: master
+  affiliated_organization:
+    type: string
+    required: true
+    nullable: false
+    description: Affiliated safety inspection firm registered under 시특법 (소속 안전진단전문기관).
+  target_facility_type:
+    type: string
+    required: true
+    nullable: false
+    description: Type of facility subject to safety inspection (대상 시설물 종류).
+    enum: [bridge, tunnel, dam, retaining_wall, building, road, railway, other]
+  license_number:
+    type: string
+    required: false
+    nullable: true
+    description: Chief safety inspector license/registration number (책임기술자 자격번호).

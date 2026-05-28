@@ -1,0 +1,69 @@
+type: WorkPermit
+version: "1.0"
+space: resource
+description: 작업허가서 — Permit-to-work document authorizing a hazardous task within a defined period.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Identifier name of the work permit.
+  document_id:
+    type: string
+    required: false
+    nullable: true
+    description: Unique document identifier.
+  issue_date:
+    type: string
+    required: false
+    nullable: true
+    description: Date of issue (ISO 8601 or yyyy-mm-dd).
+  issuer_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Reference to the issuer/signer node ID in the subject space.
+  source_doc_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Path or URL of the original source document.
+  work_type:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      작업 종류 — Type of work covered by the permit. KOSHA 안전작업허가 8종 분류
+      (일반/화기/밀폐공간/고소/굴착/정전/방사선/중장비).
+    enum: [general, hot_work, confined_space, working_at_height, excavation, electrical_isolation, radiation, heavy_equipment]
+  work_period_start:
+    type: string
+    required: false
+    nullable: true
+    description: Start of the authorized work period (ISO 8601 or yyyy-mm-dd).
+  work_period_end:
+    type: string
+    required: false
+    nullable: true
+    description: End of the authorized work period (ISO 8601 or yyyy-mm-dd).
+  hazard_class:
+    type: string
+    required: false
+    nullable: true
+    description: Hazard classification of the permitted work.
+    enum: [low, medium, high, critical]
+  permit_category:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      허가서 분류 — KOSHA 일반작업허가서(general) vs 특별작업허가서(special) 구분.
+      특별: 화기·밀폐공간·고소·굴착·정전·방사선·중장비 작업.
+    enum: [general, special]
+  gas_measurement_required:
+    type: boolean
+    required: false
+    nullable: true
+    description: |
+      가스 측정 필수 여부 — Whether gas measurement (LEL/O2/CO/H2S) is mandatory.
+      화기·밀폐공간 작업 시 작업 직전 30분 이내 측정 의무.

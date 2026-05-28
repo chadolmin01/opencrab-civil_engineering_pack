@@ -1,0 +1,59 @@
+type: SafetyInspectionReport
+version: "1.0"
+space: resource
+description: 안전점검 보고서 — Safety inspection report for a facility, including the statutory safety grade.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Identifier name of the safety inspection report.
+  document_id:
+    type: string
+    required: false
+    nullable: true
+    description: Unique document identifier.
+  issue_date:
+    type: string
+    required: false
+    nullable: true
+    description: Date of issue (ISO 8601 or yyyy-mm-dd).
+  issuer_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Reference to the issuer/signer node ID in the subject space.
+  source_doc_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Path or URL of the original source document.
+  inspection_grade:
+    type: string
+    required: false
+    nullable: true
+    description: Statutory safety grade assigned to the facility under the Special Act on Safety Control of Facilities.
+    enum: [A, B, C, D, E]
+  inspection_period:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      점검 주기/종류 — Periodicity or type of the safety inspection.
+      daily(자체 일일) / weekly(자체 주간) / regular(정기) / annual(연간) / semi_annual(반기) /
+      quarterly(분기) / precise(정밀) / emergency(수시·긴급).
+    enum: [daily, weekly, regular, annual, semi_annual, quarterly, precise, emergency]
+  target_facility_ref:
+    type: string
+    required: false
+    nullable: true
+    description: Reference to the target Facility node ID.
+  inspector_role:
+    type: string
+    required: false
+    nullable: true
+    description: |
+      점검자 자격 — Qualification role of the inspector.
+      safety_manager(안전관리자, 자체점검) / cm_engineer(건설사업관리기술자, 정기점검) /
+      safety_inspection_firm(안전진단전문기관, 정밀점검).
+    enum: [safety_manager, cm_engineer, safety_inspection_firm]

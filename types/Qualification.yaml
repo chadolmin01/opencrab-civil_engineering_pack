@@ -1,0 +1,37 @@
+type: Qualification
+version: "1.0"
+space: concept
+description: 자격증 — A professional qualification or license granted to a regulated-domain actor (e.g. 건설사업관리기술인, 토목시공기술사, 건축시공기술사). Single type; the specific kind is expressed via node_id. 근거: 건설기술 진흥법, 국가기술자격법.
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: 자격증 한국어 명칭 (e.g. "토목시공기술사").
+  english_name:
+    type: string
+    required: false
+    nullable: true
+    description: English name of the qualification, if any.
+  granting_authority:
+    type: string
+    required: true
+    nullable: false
+    description: 자격증 발급 기관 / regulatory body that grants the qualification.
+    enum: [MOLIT, MOEL, K-Water, KISTI, private_association, other]
+  level:
+    type: string
+    required: true
+    nullable: false
+    description: 자격 등급 / qualification level.
+    enum: [trainee, intermediate, senior, master, professional_engineer]
+  scope:
+    type: string
+    required: false
+    nullable: true
+    description: 권한 범위 — short description of the work scope this qualification authorizes.
+  legal_basis:
+    type: string
+    required: false
+    nullable: true
+    description: 근거 법령 조항 / governing law and article (e.g. "건진법 제39조").

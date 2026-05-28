@@ -1,0 +1,32 @@
+type: SiteEngineer
+version: "1.0"
+space: subject
+description: 시공기술자 (Site construction engineer executing construction work under 건진법).
+properties:
+  name:
+    type: string
+    required: true
+    nullable: false
+    description: Full name of the site engineer (시공기술자 본인 이름).
+  qualification_level:
+    type: string
+    required: true
+    nullable: false
+    description: Construction engineer grade under 건진법 (건설기술인 등급).
+    enum: [trainee, intermediate, senior, master]
+  affiliated_organization:
+    type: string
+    required: true
+    nullable: false
+    description: Affiliated construction contractor or firm (소속 시공사).
+  work_type_specialty:
+    type: string
+    required: true
+    nullable: false
+    description: Specialized construction work type (전문 공종 — e.g., concrete, steel, earthwork, bridge erection).
+    enum: [concrete, rebar, formwork, piling, earthwork, bridge_erection, tunnel, road, other]
+  license_number:
+    type: string
+    required: false
+    nullable: true
+    description: Construction engineer license/registration number (건설기술인 자격번호).
